@@ -1,39 +1,23 @@
-**/target/
-!.mvn/wrapper/maven-wrapper.jar
-
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-/build/
-
 .DS_Store
+node_modules
+/dist
 
-### policy files ###
-/policy_backup.json
-/alerts_backup.json
 
-### log files ###
-*.log
-/logs/
-application-vault.properties
+# local env files
+.env.local
+.env.*.local
 
-## compile frontend ##
-server/src/main/resources/static/public/onboarding/
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
