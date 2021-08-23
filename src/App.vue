@@ -1,7 +1,14 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <table>
+      <tr>
+        <td id="name-cell">Lior Raz</td>
+        <td id="router-cell">
+          <router-link to="/">Home</router-link>|
+          <router-link to="/about">About</router-link>
+        </td>
+      </tr>
+    </table>
   </div>
   <router-view/>
 </template>
@@ -26,5 +33,17 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+
+}
+
+#nav table{
+  width: 100%;
+}
+
+#name-cell{
+  text-align: left;
+}
+#router-cell{
+  text-align: right;
 }
 </style>
