@@ -9,17 +9,22 @@
         </div>
       </div>
     </header>
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 
 <style>
+/*--dark-purple: #241623ff;
+--pink-lavender: #d1b1c8ff;
+--ming: #326771ff;
+--blizzard-blue: #a9e4efff;
+--aero-blue: #c7efcfff;*/
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #d1b1c8ff;
 }
 
 #nav {
@@ -28,11 +33,11 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #c7efcfff;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #326771ff;
 }
 
 #header-container{
