@@ -1,14 +1,14 @@
 <template>
   <div id="nav">
-    <table>
-      <tr>
-        <td id="name-cell">Lior Raz</td>
-        <td id="router-cell">
-          <router-link to="/">Home</router-link>|
+    <header>
+      <div id="header-container">
+        <div id="name-in-header">Lior Raz</div>
+        <div id="router-in-header">
+          <router-link to="/">Home</router-link> |
           <router-link to="/about">About</router-link>
-        </td>
-      </tr>
-    </table>
+        </div>
+      </div>
+    </header>
   </div>
   <router-view/>
 </template>
@@ -33,17 +33,16 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
-
 }
 
-#nav table{
-  width: 100%;
+#header-container{
+  display: flex;
+  justify-content: space-between;
 }
-
-#name-cell{
+#name-in-header{
   text-align: left;
 }
-#router-cell{
+#router-in-header{
   text-align: right;
 }
 </style>
