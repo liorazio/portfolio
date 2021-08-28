@@ -1,12 +1,16 @@
 <template>
-  <nav>
-    <div>Lior Raz</div>
-    <div>
-      <router-link to="/">Home</router-link>
-      |
-      <router-link to="/about">About</router-link>
+  <div id="nav-canvas">
+    <div id="nav-bg">
+      <nav>
+        <div>Lior Raz</div>
+        <div>
+          <router-link to="/">Home</router-link>
+          |
+          <router-link to="/about">About</router-link>
+        </div>
+      </nav>
     </div>
-  </nav>
+  </div>
   <router-view/>
 </template>
 
@@ -21,17 +25,40 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  border-color: #c7efcfff;
+}
+
+#nav-canvas{
+  height: 110px;
+  /*border: 1px solid;*/
+}
+
+#nav-bg {
+  background: url("assets/bar.svg") no-repeat fixed top left;
+  background-origin: border-box;
+  background-clip: border-box;
+  height: 200px;
+  background-position-y: -70px;
+  background-size: cover;
 }
 
 nav {
-  padding: 30px;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+  font-size: 20px;
+}
+
+nav div {
+  margin: 1em;
+  background-color: transparent;
+  width: auto;
 }
 
 nav a {
   color: #c7efcfff;
+  background-color: transparent;
 }
 
 nav a.router-link-exact-active {
