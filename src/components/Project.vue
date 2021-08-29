@@ -39,11 +39,6 @@ export default {
       hover: false,
       pictureStatic: require("../assets/banner.png")
     }
-  },
-  computed: {
-    cssVars() {
-      return {'--span-display': this.hover ? 'block' : 'none'}
-    }
   }
 }
 </script>
@@ -56,7 +51,7 @@ span {
   left: 0;
   background: #ffffff;
   white-space: nowrap;
-  display: var(--span-display);
+  display: none;
   padding: 1rem;
   font-weight: 400;
   margin-top: 1.25rem;
