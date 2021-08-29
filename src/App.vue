@@ -21,16 +21,30 @@
 --blizzard-blue: #a9e4efff;
 --aero-blue: #c7efcfff;*/
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Rubik, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   border-color: #c7efcfff;
+  background-color: transparent;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
-#nav-canvas{
+#nav-canvas {
   height: 110px;
   /*border: 1px solid;*/
+}
+
+
+@media only screen and (max-width: 768px) {
+  #nav-canvas {
+    height: 70px;
+    /*border: 1px solid;*/
+  }
+
 }
 
 #nav-bg {

@@ -1,27 +1,25 @@
 <template>
   <div class="home">
     <div class="canvas"><img alt="liorazio logo" src="../assets/logo.gif"></div>
-    <div class="canvas reduced-opacity"><img alt="liorazio banner" src="../assets/banner.gif"></div>
-<!--    <iframe src="https://www.youtube.com/embed/KoT_5IM2AKM"/>-->
-    <iframe src="https://player.vimeo.com/video/444298599?h=30668b83f1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    <H1 class="wide-letter-heading">Projects!</H1>
+    <div class="canvas"><img alt="liorazio banner" src="../assets/banner.png"></div>
+    <!--    <iframe src="https://www.youtube.com/embed/KoT_5IM2AKM"/>-->
+
+    <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <Projects/>
   </div>
 </template>
 
 <style>
 
-.home {
-  align-content: center;
-}
 
-.wide-letter-heading {
-  letter-spacing: 0.5em;
-  font-weight: bold;
-}
-
-
-iframe {
-  border: solid 15px;
+.video {
+  margin-top: 30px;
+  border: solid 15px #fb826b;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
   width: 45%;
   height: 25vw;
 }
@@ -29,34 +27,20 @@ iframe {
 
 .canvas img {
   padding: 5px;
-  /*border-style: solid;*/
-  /*border-width: 7px;*/
-  /*border-radius: 50%;*/
   width: 35%;
-  /*height: 300px;*/
-  /*object-fit: cover;*/
 }
 
 @media only screen and (max-width: 768px) {
 
   .canvas img {
-    padding: 5px;
-    /*border-style: solid;*/
-    /*border-width: 7px;*/
-    /*border-radius: 50%;*/
-    width: 100%;
-    /*height: 300px;*/
-    /*object-fit: cover;*/
+    padding: 0;
+    margin-top: 30px;
+    width: 95%;
   }
 
-  .frame {
-    width: 100%;
-    left: 0;
-  }
-
-  iframe {
-    width: 100%;
-    height: 56vw;
+  .video {
+    width: 90%;
+    height: 52vw;
 
   }
 }
@@ -68,9 +52,12 @@ iframe {
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 
+import Projects from "@/components/Projects";
+
 export default {
   name: 'Home',
   components: {
+    Projects
     // HelloWorld
   }
 }
