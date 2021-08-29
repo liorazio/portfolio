@@ -19,7 +19,7 @@ export default {
 <style scoped>
 .project-grid {
   display: grid;
-  max-width: 85vw;
+  max-width: 50vw;
   width: 100%;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
@@ -48,6 +48,18 @@ export default {
 @media only screen and (max-width: 768px) {
   #projects {
     margin-top: 20px;
+  }
+
+  .project-grid {
+    display: grid;
+    max-width: 90vw;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content: center;
   }
 
   .wide-letter-heading {

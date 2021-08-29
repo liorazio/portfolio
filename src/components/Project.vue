@@ -1,17 +1,17 @@
 <template>
-  <div class="project" :style="projectSpan">
+  <div :class="'project grid-x' + gridSpanCalc + '-width'">
     <figure>
       <img
           @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
-          :src="pictureStatic" :style="imgStyle" alt="img stab"/>
+          :style="imgStyle"
+          :src="pictureStatic" alt="img stab"/>
       <figcaption>
-        <h2>Hello</h2>
-        <h3>World</h3>
+        <h2>{{ title }}</h2>
+        <h3>{{ subtitle }}</h3>
       </figcaption>
       <span id="span">
-<!--      <span id="span">-->
-        <h2>Hello</h2>
-        <h3>World</h3>
+       <h2>{{ title }}</h2>
+       <h3>{{ subtitle }}</h3>
       </span>
     </figure>
   </div>
@@ -25,13 +25,23 @@ export default {
       type: Number,
       required: false,
       default: 4
+    },
+    title: {
+      type: String,
+      required: false,
+      default: "Hello"
+    },
+    subtitle: {
+      type: String,
+      required: false,
+      default: "World"
     }
   },
   methods: {
     spanLocation: function (hover, event) {
       this.hover = hover;
       const span = document.querySelector('#span')
-      if (hover && span) {
+      if (hover && span && window.innerWidth > 768) {
         const x = event.pageX
         const y = event.pageY
         span.style.transform = `translate3d(${x}px, ${y}px, 0)`
@@ -41,15 +51,29 @@ export default {
         span.style.display = 'none'
       }
     },
-    onResize() {
+    onResize: function () {
+      //span calculate for resize
       if (window.innerWidth > 768) {
         this.gridSpanCalc = this.gridSpan
       } else {
         this.gridSpanCalc = 12
       }
-    }
+      //img style caclucalte for resize
+      if (window.innerWidth > 768) {
+        this.imgStyle = {
+          'width': this.gridSpanCalc === 4 ? '16vw' : (this.gridSpanCalc === 6 ? '24.5vw' : '50vw'),
+          'height': this.gridSpanCalc === 4 ? '9.51vw' : (this.gridSpanCalc === 6 ? '14.59vw' : '29.82vw'),
+        }
+      } else {
+        this.imgStyle = {
+          'width': '90vw',
+          'height': '30vw'
+        }
+      }
+    },
   },
   mounted() {
+    this.onResize()
     window.addEventListener('resize', this.onResize)
   },
   beforeUnmount() {
@@ -59,29 +83,34 @@ export default {
     return {
       hover: false,
       gridSpanCalc: this.gridSpan,
-      pictureStatic: require("../assets/banner.png")
-    }
-  },
-  computed: {
-    projectSpan() {
-      return {
-        'grid-column-start': 'span ' + this.gridSpanCalc,
-        'grid-column-end': 'span ' + this.gridSpanCalc
-      };
-    },
-    imgStyle() {
-      return {
-        'width': this.gridSpanCalc === 4 ? '27vw' : (this.gridSpanCalc === 6 ? '41.4vw' : '84.6vw'),
-        'height': this.gridSpanCalc === 4 ? '9.51vw' : (this.gridSpanCalc === 6 ? '14.59vw' : '29.82vw'),
-
+      pictureStatic: require("../assets/banner.png"),
+      imgStyle: {
+        'width': '90vw',
+        'height': '30vw'
       }
     }
+  },
 
-  }
 }
 </script>
 
 <style scoped>
+
+.grid-x4-width {
+  grid-column-start: span 4;
+  grid-column-end: span 4;
+}
+
+.grid-x6-width {
+  grid-column-start: span 6;
+  grid-column-end: span 6;
+}
+
+.grid-x12-width {
+  grid-column-start: span 12;
+  grid-column-end: span 12;
+}
+
 span {
   position: absolute;
   z-index: 1;
@@ -127,12 +156,14 @@ img:hover {
   }
 
   img {
-    border: solid 5px;
+    border: solid 1px;
     width: 80vw;
     height: 41vw;
+    transition: none;
+    transform: none;
   }
 
 }
 
 
-</style>w
+</style>
