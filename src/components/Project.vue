@@ -73,7 +73,7 @@ export default {
       return {
         'border': 'solid 5px',
         'width': this.gridSpanCalc === 4 ? '27vw' : (this.gridSpanCalc === 6 ? '41.4vw' : '84.6vw'),
-        'height': this.gridSpanCalc === 4 ? '14vw' : (this.gridSpanCalc === 6 ? '27vw' : '41vw'),
+        'height': this.gridSpanCalc === 4 ? '9.51vw' : (this.gridSpanCalc === 6 ? '14.59vw' : '29.82vw'),
       }
     }
 
