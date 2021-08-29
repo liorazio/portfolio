@@ -2,7 +2,7 @@
   <div class="project" :style="projectSpan">
     <figure>
       <img
-                @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
+          @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
           :src="pictureStatic" :style="imgStyle" alt="img stab"/>
       <figcaption>
         <h2>Hello</h2>
@@ -71,9 +71,9 @@ export default {
     },
     imgStyle() {
       return {
-        'border': 'solid 5px',
         'width': this.gridSpanCalc === 4 ? '27vw' : (this.gridSpanCalc === 6 ? '41.4vw' : '84.6vw'),
         'height': this.gridSpanCalc === 4 ? '9.51vw' : (this.gridSpanCalc === 6 ? '14.59vw' : '29.82vw'),
+
       }
     }
 
@@ -98,6 +98,17 @@ span {
 
 figcaption {
   display: none;
+}
+
+img {
+  border: 1px solid;
+  object-fit: cover;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+  transform: scale(1.05);
 }
 
 @media only screen and (max-width: 768px) {
