@@ -57,6 +57,10 @@ p {
     line-height: 1.5em;
     text-align: left;
   }
+
+  img {
+    width: 90vw;
+  }
 }
 
 
