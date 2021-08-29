@@ -1,7 +1,7 @@
 <template>
   <section class="projects">
     <div id="projects">
-      <H1 class="wide-letter-heading">Projects</H1>
+      <h1 class="wide-letter-heading">Projects</h1>
       <ProjectGrid class="project-grid"/>
     </div>
   </section>

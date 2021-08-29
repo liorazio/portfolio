@@ -4,7 +4,7 @@
       <nav>
         <div>Lior Raz</div>
         <div>
-          <router-link to="/">Home</router-link>
+          <router-link to="/">Work</router-link>
           |
           <router-link to="/about">About</router-link>
         </div>
@@ -71,12 +71,14 @@ nav div {
 }
 
 nav a {
-  color: #c7efcfff;
+  color: #000000;
   background-color: transparent;
+  text-decoration: none;
 }
 
 nav a.router-link-exact-active {
-  color: #326771ff;
+  color: #2e8bff;
 }
+
 
 </style>

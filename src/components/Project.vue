@@ -1,8 +1,9 @@
 <template>
-  <div class="project">
+  <div class="project" :style="projectSpan">
     <figure>
-      <img @mousemove="spanlocation(true,$event);" @mouseleave="spanlocation(false)"
-           :src="pictureStatic" alt="img stab"/>
+      <img
+                @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
+          :src="pictureStatic" :style="imgStyle" alt="img stab"/>
       <figcaption>
         <h2>Hello</h2>
         <h3>World</h3>
@@ -19,26 +20,63 @@
 <script>
 export default {
   name: "Project",
+  props: {
+    gridSpan: {
+      type: Number,
+      required: false,
+      default: 4
+    }
+  },
   methods: {
-    spanlocation: function (hover, event) {
+    spanLocation: function (hover, event) {
       this.hover = hover;
       const span = document.querySelector('#span')
-      if (hover) {
-        const x = event.pageX;
-        const y = event.pageY;
-        span.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      if (hover && span) {
+        const x = event.pageX
+        const y = event.pageY
+        span.style.transform = `translate3d(${x}px, ${y}px, 0)`
         span.style.display = 'block'
-        span.position.absolute = 'block'
+        span.style.position = "absolute"
       } else {
         span.style.display = 'none'
       }
+    },
+    onResize() {
+      if (window.innerWidth > 768) {
+        this.gridSpanCalc = this.gridSpan
+      } else {
+        this.gridSpanCalc = 12
+      }
     }
+  },
+  mounted() {
+    window.addEventListener('resize', this.onResize)
+  },
+  beforeUnmount() {
+    window.removeEventListener('resize', this.onResize)
   },
   data: function () {
     return {
       hover: false,
+      gridSpanCalc: this.gridSpan,
       pictureStatic: require("../assets/banner.png")
     }
+  },
+  computed: {
+    projectSpan() {
+      return {
+        'grid-column-start': 'span ' + this.gridSpanCalc,
+        'grid-column-end': 'span ' + this.gridSpanCalc
+      };
+    },
+    imgStyle() {
+      return {
+        'border': 'solid 5px',
+        'width': this.gridSpanCalc === 4 ? '27vw' : (this.gridSpanCalc === 6 ? '41.4vw' : '84.6vw'),
+        'height': this.gridSpanCalc === 4 ? '14vw' : (this.gridSpanCalc === 6 ? '27vw' : '41vw'),
+      }
+    }
+
   }
 }
 </script>
@@ -58,21 +96,9 @@ span {
   margin-left: -2rem;
 }
 
-.project {
-  grid-column-start: span 4;
-  grid-column-end: span 4;
-}
-
 figcaption {
   display: none;
 }
-
-img {
-  border: solid 5px;
-  width: 27vw;
-  height: 14vw;
-}
-
 
 @media only screen and (max-width: 768px) {
 
