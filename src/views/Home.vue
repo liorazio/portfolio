@@ -7,6 +7,7 @@
     <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     <Projects/>
+    <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
   </div>
 </template>
 
@@ -28,6 +29,10 @@
 .canvas img {
   padding: 5px;
   width: 35%;
+}
+
+.copyright{
+  padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 768px) {
