@@ -5,7 +5,6 @@
     <Project/>
     <Project :grid-span="6"/>
     <Project :grid-span="6"/>
-    <Project :grid-span="12"/>
   </div>
 
 </template>

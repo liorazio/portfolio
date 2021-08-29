@@ -1,7 +1,7 @@
 <template>
   <section class="projects">
     <div id="projects">
-      <h1 class="wide-letter-heading">Projects</h1>
+      <WideHeader text="Projects"/>
       <ProjectGrid class="project-grid"/>
     </div>
   </section>
@@ -9,10 +9,11 @@
 
 <script>
 import ProjectGrid from "@/components/ProjectGrid";
+import WideHeader from "@/components/WideHeader";
 
 export default {
   name: "Projects",
-  components: {ProjectGrid}
+  components: {WideHeader, ProjectGrid}
 }
 </script>
 
@@ -37,11 +38,6 @@ export default {
 #projects {
   margin-top: 50px;
 
-}
-
-.wide-letter-heading {
-  letter-spacing: 1.5em;
-  font-weight: bold;
 }
 
 
