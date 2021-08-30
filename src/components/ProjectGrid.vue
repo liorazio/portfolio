@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Project/>
-    <Project/>
-    <Project/>
-    <Project :grid-span="6"/>
-    <Project :grid-span="6"/>
+    <Project title="Character design"/>
+    <Project title="Gifs"/>
+    <Project title="Golden aggle"/>
+    <Project :grid-span="6" title="Illustrations"/>
+    <Project :grid-span="6" title="Sketch book"/>
   </div>
 
 </template>
@@ -21,7 +21,7 @@ export default {
 <style scoped>
 .project-grid {
   width: 100%;
-  margin: 30px auto ;
+  margin: 30px auto;
 }
 
 </style>

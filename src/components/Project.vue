@@ -7,17 +7,17 @@
           :src="pictureStatic" alt="img stab"/>
       <figcaption>
         <h2>{{ title }}</h2>
-        <h3>{{ subtitle }}</h3>
       </figcaption>
-      <span id="span">
+      <span :id="spanId">
        <h2>{{ title }}</h2>
-       <h3>{{ subtitle }}</h3>
       </span>
     </figure>
   </div>
 </template>
 
 <script>
+import {uuid} from 'vue-uuid';
+
 export default {
   name: "Project",
   props: {
@@ -31,16 +31,12 @@ export default {
       required: false,
       default: "Hello"
     },
-    subtitle: {
-      type: String,
-      required: false,
-      default: "World"
-    }
+
   },
   methods: {
     spanLocation: function (hover, event) {
       this.hover = hover;
-      const span = document.querySelector('#span')
+      const span = document.querySelector('#' + this.spanId)
       if (hover && span && window.innerWidth > 768) {
         const x = event.pageX
         const y = event.pageY
@@ -62,7 +58,7 @@ export default {
       if (window.innerWidth > 768) {
         this.imgStyle = {
           'width': this.gridSpanCalc === 4 ? '16vw' : (this.gridSpanCalc === 6 ? '24.5vw' : '50vw'),
-          'height': this.gridSpanCalc === 4 ? '9.51vw' : (this.gridSpanCalc === 6 ? '14.59vw' : '29.82vw'),
+          'height': this.gridSpanCalc === 4 ? '12vw' : (this.gridSpanCalc === 6 ? '18.38vw' : '29.82vw'),
         }
       } else {
         this.imgStyle = {
@@ -76,7 +72,7 @@ export default {
     this.onResize()
     window.addEventListener('resize', this.onResize)
   },
-  beforeUnmount() {
+  unmounted() {
     window.removeEventListener('resize', this.onResize)
   },
   data: function () {
@@ -90,6 +86,12 @@ export default {
       }
     }
   },
+  computed: {
+    spanId: function () {
+      return 'span-' + uuid.v4();
+    }
+  }
+
 
 }
 </script>
