@@ -1,25 +1,34 @@
 <template>
   <div id="nav-canvas">
-    <div id="nav-bg">
-      <nav>
-        <div>Lior Raz</div>
-        <div>
-          <router-link to="/">Work</router-link>
-          |
-          <router-link to="/about">About</router-link>
-        </div>
-      </nav>
-    </div>
+    <img id="nav-img" :src="barImgSrc" alt="bar">
+    <nav>
+      <div>Lior Raz</div>
+      <div>
+        <router-link to="/">Work</router-link>
+        |
+        <router-link to="/about">About</router-link>
+      </div>
+    </nav>
   </div>
-  <router-view/>
+  <div>
+    <router-view/>
+  </div>
 </template>
 
+<script>
+
+
+export default {
+  name: "App",
+  data: function (){
+    return {
+      barImgSrc: require("@/assets/bar.svg")
+    }
+  }
+}
+</script>
+
 <style>
-/*--dark-purple: #241623ff;
---pink-lavender: #d1b1c8ff;
---ming: #326771ff;
---blizzard-blue: #a9e4efff;
---aero-blue: #c7efcfff;*/
 #app {
   font-family: Rubik, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,26 +43,20 @@
 }
 
 #nav-canvas {
-  height: 110px;
-  /*border: 1px solid;*/
+  position: relative;
 }
 
-
-@media only screen and (max-width: 768px) {
-  #nav-canvas {
-    height: 70px;
-    /*border: 1px solid;*/
-  }
-
-}
-
-#nav-bg {
-  background: url("assets/bar.svg") no-repeat fixed top left;
-  background-origin: border-box;
-  background-clip: border-box;
-  height: 200px;
-  background-position-y: -70px;
-  background-size: cover;
+#nav-img {
+  position:absolute;
+  z-index:-1;
+  top:-70px;
+  left:0;
+  /*overflow-x: hidden !important;*/
+  /*overflow-y: hidden !important;*/
+  width:100%; /* alternative: right:0; */
+  height:174px;
+  object-fit: fill ;
+  /*border: solid 2px black;*/
 }
 
 nav {
@@ -80,5 +83,17 @@ nav a.router-link-exact-active {
   color: #2e8bff;
 }
 
+@media only screen and (max-width: 768px) {
+
+  #nav-img {
+    position:absolute;
+    z-index:-1;
+    top:-100px;
+    left:0;
+    width:100%; /* alternative: right:0; */
+    height:174px;
+    /*border: solid 2px black;*/
+  }
+}
 
 </style>
