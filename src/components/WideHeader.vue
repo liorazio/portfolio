@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="wide-letter-heading">{{ text }}</h1>
+    <h1 class="wide-letter-heading"><slot/></h1>
   </div>
 </template>
 

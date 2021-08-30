@@ -1,18 +1,46 @@
 <template>
-  <div class="home">
+  <div>
     <div class="canvas"><img alt="liorazio logo" src="../assets/logo.gif"></div>
     <div class="canvas"><img alt="liorazio banner" src="../assets/banner.png"></div>
     <!--    <iframe src="https://www.youtube.com/embed/KoT_5IM2AKM"/>-->
 
     <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    <Projects/>
+    <section>
+      <div id="projects">
+        <WideHeader>Projects</WideHeader>
+        <CenterGrid>
+          <Project title="Character design"/>
+          <Project title="Gifs"/>
+          <Project title="Golden aggle"/>
+          <Project :grid-span="6" title="Illustrations"/>
+          <Project :grid-span="6" title="Sketch book"/>
+        </CenterGrid>
+      </div>
+    </section>
     <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
   </div>
 </template>
 
-<style>
+<script>
+// @ is an alias to /src
 
+import Project from "@/components/Project";
+import WideHeader from "@/components/WideHeader";
+import CenterGrid from "@/components/CenterGrid";
+
+export default {
+  name: 'Home',
+  components: {
+    Project, WideHeader, CenterGrid
+  }
+}
+</script>
+
+<style>
+#projects {
+  margin-top: 3rem;
+}
 
 .video {
   margin-top: 30px;
@@ -25,17 +53,19 @@
   height: 25vw;
 }
 
-
 .canvas img {
   padding: 5px;
   width: 35%;
 }
 
-.copyright{
+.copyright {
   padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 768px) {
+  #projects {
+    margin-top: 1.5rem;
+  }
 
   .canvas img {
     padding: 0;
@@ -49,21 +79,5 @@
 
   }
 }
-
-
 </style>
 
-<script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-
-import Projects from "@/components/Projects";
-
-export default {
-  name: 'Home',
-  components: {
-    Projects
-    // HelloWorld
-  }
-}
-</script>
