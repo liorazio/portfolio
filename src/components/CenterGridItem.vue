@@ -1,5 +1,5 @@
 <template>
-  <div :class="'project grid-x' + gridSpanCalc + '-width'">
+  <div :class="'grid-x' + gridSpanCalc + '-width'">
     <slot/>
   </div>
 </template>
