@@ -2,33 +2,29 @@
   <section class="projects">
     <div id="projects">
       <WideHeader text="Projects"/>
-      <ProjectGrid class="project-grid"/>
+      <CenterGrid>
+          <Project title="Character design"/>
+          <Project title="Gifs"/>
+          <Project title="Golden aggle"/>
+          <Project :grid-span="6" title="Illustrations"/>
+          <Project :grid-span="6" title="Sketch book"/>
+      </CenterGrid>
     </div>
   </section>
 </template>
 
 <script>
-import ProjectGrid from "@/components/ProjectGrid";
+import Project from "@/components/Project";
 import WideHeader from "@/components/WideHeader";
+import CenterGrid from "@/components/CenterGrid";
 
 export default {
   name: "Projects",
-  components: {WideHeader, ProjectGrid}
+  components: {CenterGrid, WideHeader, Project}
 }
 </script>
 
 <style scoped>
-.project-grid {
-  display: grid;
-  max-width: 50vw;
-  width: 100%;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 1rem;
-  flex-direction: column;
-  flex-flow: row wrap;
-  justify-content: center;
-}
 
 .projects {
   padding: 0 0 4rem 0;
@@ -46,22 +42,6 @@ export default {
     margin-top: 20px;
   }
 
-  .project-grid {
-    display: grid;
-    max-width: 90vw;
-    width: 100%;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1rem;
-    flex-direction: column;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-
-  .wide-letter-heading {
-    letter-spacing: 6vw;
-    font-weight: bold;
-  }
 
 }
 

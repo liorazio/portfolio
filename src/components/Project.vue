@@ -1,9 +1,10 @@
 <template>
-  <div :class="'project grid-x' + gridSpanCalc + '-width'">
+  <CenterGridItem :gridSpan="this.gridSpan">
     <figure>
+      <!--          :style="imgStyle"-->
       <img
           @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
-          :style="imgStyle"
+          :class="'img-grid-x' + gridSpanCalc +'-span'"
           :src="pictureStatic" alt="img stab"/>
       <figcaption>
         <h2>{{ title }}</h2>
@@ -12,14 +13,16 @@
        <h2>{{ title }}</h2>
       </span>
     </figure>
-  </div>
+  </CenterGridItem>
 </template>
 
 <script>
 import {uuid} from 'vue-uuid';
+import CenterGridItem from "@/components/CenterGridItem";
 
 export default {
   name: "Project",
+  components: {CenterGridItem},
   props: {
     gridSpan: {
       type: Number,
@@ -48,23 +51,11 @@ export default {
       }
     },
     onResize: function () {
-      //span calculate for resize
-      if (window.innerWidth > 768) {
-        this.gridSpanCalc = this.gridSpan
-      } else {
-        this.gridSpanCalc = 12
-      }
       //img style caclucalte for resize
       if (window.innerWidth > 768) {
-        this.imgStyle = {
-          'width': this.gridSpanCalc === 4 ? '16vw' : (this.gridSpanCalc === 6 ? '24.5vw' : '50vw'),
-          'height': this.gridSpanCalc === 4 ? '12vw' : (this.gridSpanCalc === 6 ? '18.38vw' : '29.82vw'),
-        }
+        this.gridSpanCalc = this.gridSpan;
       } else {
-        this.imgStyle = {
-          'width': '90vw',
-          'height': '30vw'
-        }
+        this.gridSpanCalc = 12;
       }
     },
   },
@@ -82,7 +73,7 @@ export default {
       pictureStatic: require("../assets/banner.png"),
       imgStyle: {
         'width': '90vw',
-        'height': '30vw'
+        'height': '64.5vw'
       }
     }
   },
@@ -97,21 +88,6 @@ export default {
 </script>
 
 <style scoped>
-
-.grid-x4-width {
-  grid-column-start: span 4;
-  grid-column-end: span 4;
-}
-
-.grid-x6-width {
-  grid-column-start: span 6;
-  grid-column-end: span 6;
-}
-
-.grid-x12-width {
-  grid-column-start: span 12;
-  grid-column-end: span 12;
-}
 
 span {
   position: absolute;
@@ -131,6 +107,22 @@ figcaption {
   display: none;
 }
 
+.img-grid-x4-span {
+  width: 16vw;
+  height: 12vw
+}
+
+.img-grid-x6-span {
+  width: 24.5vw;
+  height: 18.38vw;
+}
+
+.img-grid-x12-span {
+  width: 50vw;
+  height: 37.5vw
+}
+
+
 img {
   border: 1px solid;
   object-fit: cover;
@@ -144,6 +136,12 @@ img:hover {
 
 @media only screen and (max-width: 768px) {
 
+  .img-grid-x12-span {
+    width: 90vw;
+    height: 64.5vw
+  }
+
+
   span {
     display: none;
   }
@@ -152,19 +150,15 @@ img:hover {
     display: block;
   }
 
-  .project {
-    grid-column-start: span 12;
-    grid-column-end: span 12;
-  }
-
   img {
     border: solid 1px;
-    width: 80vw;
-    height: 41vw;
     transition: none;
     transform: none;
   }
 
+  img:hover {
+    transform: none;
+  }
 }
 
 
