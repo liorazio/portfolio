@@ -1,56 +1,56 @@
 [
   {
-    "imgSrc": "./gifs/runsmall.gif",
-    "gridSpan": 4,
+    "imgSrc": "./gifs/runsmall.jpg",
+    "gridSpan": 6,
     "description": "running squirrel classic animation "
   },
   {
-    "imgSrc": "./gifs/dinoshok.gif",
-    "gridSpan": 4,
+    "imgSrc": "./gifs/dinoshok.jpg",
+    "gridSpan": 6,
     "description": "game style creature animation. illustration and concept by me. "
   },
   {
-    "imgSrc": "./gifs/dog1.gif",
+    "imgSrc": "./gifs/dog1.jpg",
     "gridSpan": 4,
     "description": "panting corgi "
   },
   {
-    "imgSrc": "./gifs/dogo sit.gif",
+    "imgSrc": "./gifs/dogosit.jpg",
     "gridSpan": 4,
     "description": "panting dog for a game concept"
   },
   {
-    "imgSrc": "./gifs/dogorun.gif",
+    "imgSrc": "./gifs/dogorun.jpg",
     "gridSpan": 4,
     "description": "running dog for a game concept "
   },
   {
-    "imgSrc": "./gifs/fish1.gif",
+    "imgSrc": "./gifs/dogjump2.jpg",
+    "gridSpan": 6,
+    "description": "jumping dog loop "
+  },
+  {
+    "imgSrc": "./gifs/sleep.jpg",
+    "gridSpan": 6,
+    "description": "Animation loop for Abook, a book about being a first time father"
+  },
+  {
+    "imgSrc": "./gifs/fish.jpg",
     "gridSpan": 4,
     "description": "small animation loop, part of a movie about india"
   },
   {
-    "imgSrc": "./gifs/sleep.gif",
+    "imgSrc": "./gifs/belly_yel.jpg",
     "gridSpan": 4,
     "description": "Animation loop for Abook, a book about being a first time father"
   },
   {
-    "imgSrc": "./gifs/belly_yel.gif",
-    "gridSpan": 4,
-    "description": "Animation loop for Abook, a book about being a first time father"
-  },
-  {
-    "imgSrc": "./gifs/dogjump2.gif",
-    "gridSpan": 4,
-    "description": "jumping dog loop "
-  },
-  {
-    "imgSrc": "./gifs/dogjump1.gif",
+    "imgSrc": "./gifs/dogjump1.jpg",
     "gridSpan": 4,
     "description": "Another style of a jumping dog"
   },
   {
-    "imgSrc": "./gifs/kattaplle.gif",
+    "imgSrc": "./gifs/kattaplle.jpg",
     "gridSpan": 4,
     "description": "An apple to a kettle"
   }

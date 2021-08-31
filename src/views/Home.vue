@@ -12,13 +12,13 @@
         <CenterGrid>
           <Project title="Character design" imgSrc="./cd/pandalady.jpg"
                    :routeTo="{name: 'Gallery', params: {itemList: './cd.json'}}"/>
-          <Project title="Gifs"
+          <Project title="Gifs" imgSrc="./gifs/dog1.jpg"
                    :routeTo="{name: 'Gallery', params: {itemList: './gifs.json'}}"/>
-          <Project title="Golden aggle"
+          <Project title="Golden aggle" imgSrc="./golden/logo.jpg"
                    :routeTo="{name: 'Gallery', params: {itemList: './golden.json'}}"/>
-          <Project :grid-span="6" title="Illustrations"
+          <Project :grid-span="6" title="Illustrations" imgSrc="./illust/dogskate.jpg"
                    :routeTo="{name: 'Gallery', params: {itemList: './illust.json'}}"/>
-          <Project :grid-span="6" title="Sketch book"
+          <Project :grid-span="6" title="Sketch book" imgSrc="./sketch/bunnies.jpg"
                    :routeTo="{name: 'Gallery', params: {itemList: './sketch.json'}}"/>
         </CenterGrid>
       </div>
