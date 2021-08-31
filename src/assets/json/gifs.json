@@ -1,0 +1,57 @@
+[
+  {
+    "imgSrc": "./gifs/runsmall.gif",
+    "gridSpan": 4,
+    "description": "running squirrel classic animation "
+  },
+  {
+    "imgSrc": "./gifs/dinoshok.gif",
+    "gridSpan": 4,
+    "description": "game style creature animation. illustration and concept by me. "
+  },
+  {
+    "imgSrc": "./gifs/dog1.gif",
+    "gridSpan": 4,
+    "description": "panting corgi "
+  },
+  {
+    "imgSrc": "./gifs/dogo sit.gif",
+    "gridSpan": 4,
+    "description": "panting dog for a game concept"
+  },
+  {
+    "imgSrc": "./gifs/dogorun.gif",
+    "gridSpan": 4,
+    "description": "running dog for a game concept "
+  },
+  {
+    "imgSrc": "./gifs/fish1.gif",
+    "gridSpan": 4,
+    "description": "small animation loop, part of a movie about india"
+  },
+  {
+    "imgSrc": "./gifs/sleep.gif",
+    "gridSpan": 4,
+    "description": "Animation loop for Abook, a book about being a first time father"
+  },
+  {
+    "imgSrc": "./gifs/belly_yel.gif",
+    "gridSpan": 4,
+    "description": "Animation loop for Abook, a book about being a first time father"
+  },
+  {
+    "imgSrc": "./gifs/dogjump2.gif",
+    "gridSpan": 4,
+    "description": "jumping dog loop "
+  },
+  {
+    "imgSrc": "./gifs/dogjump1.gif",
+    "gridSpan": 4,
+    "description": "Another style of a jumping dog"
+  },
+  {
+    "imgSrc": "./gifs/kattaplle.gif",
+    "gridSpan": 4,
+    "description": "An apple to a kettle"
+  }
+]

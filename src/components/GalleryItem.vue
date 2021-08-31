@@ -108,6 +108,7 @@ figcaption {
 .gallery-img {
   border: 1px solid;
   object-fit: cover;
+  object-position: center center;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
 }

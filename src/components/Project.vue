@@ -1,10 +1,12 @@
 <template>
   <CenterGridItem :gridSpan="this.gridSpan">
     <figure>
-      <img
-          @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
-          :class="'img-grid-x' + gridSpanCalc +'-span'"
-          :src="pictureStatic" alt="img stab"/>
+      <router-link :to="this.routeTo">
+        <img
+            @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
+            :class="'img-grid-x' + gridSpanCalc +'-span'"
+            :src="pictureStatic" alt="img stab"/>
+      </router-link>
       <figcaption>
         <h2>{{ title }}</h2>
       </figcaption>
@@ -33,6 +35,14 @@ export default {
       required: false,
       default: "Hello"
     },
+    imgSrc: {
+      type: String,
+      required: false,
+      default: "./banner.png"
+    },
+    routeTo: {
+      type: Object
+    }
 
   },
   methods: {
@@ -66,10 +76,12 @@ export default {
     window.removeEventListener('resize', this.onResize)
   },
   data: function () {
+    const images = require.context('../assets/', true, /.*\.(gif|png|jpe?g|svg)$/)
+
     return {
       hover: false,
       gridSpanCalc: this.gridSpan,
-      pictureStatic: require("../assets/banner.png"),
+      pictureStatic: images(this.imgSrc),
     }
   },
   computed: {
@@ -77,8 +89,6 @@ export default {
       return 'span-' + uuid.v4();
     }
   }
-
-
 }
 </script>
 

@@ -10,15 +10,21 @@
       <div id="projects">
         <WideHeader>Projects</WideHeader>
         <CenterGrid>
-          <Project title="Character design"/>
-          <Project title="Gifs"/>
-          <Project title="Golden aggle"/>
-          <Project :grid-span="6" title="Illustrations"/>
-          <Project :grid-span="6" title="Sketch book"/>
+          <Project title="Character design" imgSrc="./cd/pandalady.jpg"
+                   :routeTo="{name: 'Gallery', params: {itemList: './cd.json'}}"/>
+          <Project title="Gifs"
+                   :routeTo="{name: 'Gallery', params: {itemList: './gifs.json'}}"/>
+          <Project title="Golden aggle"
+                   :routeTo="{name: 'Gallery', params: {itemList: './golden.json'}}"/>
+          <Project :grid-span="6" title="Illustrations"
+                   :routeTo="{name: 'Gallery', params: {itemList: './illust.json'}}"/>
+          <Project :grid-span="6" title="Sketch book"
+                   :routeTo="{name: 'Gallery', params: {itemList: './sketch.json'}}"/>
         </CenterGrid>
       </div>
     </section>
     <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
+<!--    <video src="https://i.giphy.com/media/K8bIH5Z2dos1lTU9Pc/giphy.mp4" autoplay loop />-->
   </div>
 </template>
 
@@ -34,6 +40,7 @@ export default {
   components: {
     Project, WideHeader, CenterGrid
   }
+
 }
 </script>
 

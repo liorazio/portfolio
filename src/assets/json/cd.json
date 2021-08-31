@@ -1,0 +1,52 @@
+[
+  {
+    "imgSrc": "./cd/Dino.jpg",
+    "gridSpan": 4,
+    "description": "Concept monster for a game. you can see the animated version in Gifs folder "
+  },
+  {
+    "imgSrc": "./cd/deer.jpg",
+    "gridSpan": 4,
+    "description": "Concept monster for a game. the file is ready for animation"
+  },
+  {
+    "imgSrc": "./cd/tigersharker.jpg",
+    "gridSpan": 4,
+    "description": "Redrawing of a charecter i made up at age 15"
+  },
+  {
+    "imgSrc": "./cd/pandalady.jpg",
+    "gridSpan": 6,
+    "description": "Redrawing of a charecter i made up at age 15"
+  },
+  {
+    "imgSrc": "./cd/Frontloading.jpg",
+    "gridSpan": 6,
+    "description": "Concept art for a mobile game."
+  },
+  {
+    "imgSrc": "./cd/Test.jpg",
+    "gridSpan": 6,
+    "description": "Concept art for a mobile game."
+  },
+  {
+    "imgSrc": "./cd/dogpeople.jpg",
+    "gridSpan": 6,
+    "description": "Dog persons!"
+  },
+  {
+    "imgSrc": "./cd/elements.jpg",
+    "gridSpan": 4,
+    "description": "Concept art for a mobile game."
+  },
+  {
+    "imgSrc": "./cd/rancher.jpg",
+    "gridSpan": 4,
+    "description": "Concept for a rancher girl."
+  },
+  {
+    "imgSrc": "./cd/aliandude.jpg",
+    "gridSpan": 4,
+    "description": "from the imagination of a child, was featured in \"פרויקט מפלצתי 2020\""
+  }
+]

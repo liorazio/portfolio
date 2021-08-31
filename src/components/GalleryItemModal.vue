@@ -9,8 +9,10 @@
         <i @click="$emit('modal-overlay-click')" id="btn-close" class="far fa-window-close"></i>
       </div>
       <img class="modal-img" :src="this.imgSrc" alt="bigger img">
-      <h2 v-if="this.caption">{{ this.caption }}</h2>
-      <h3>{{ this.description }}</h3>
+      <div class="text-under-img">
+        <h2 v-if="this.caption">{{ this.caption }}</h2>
+        <h3>{{ this.description }}</h3>
+      </div>
     </div>
   </transition>
 </template>
@@ -39,6 +41,11 @@ export default {
 </script>
 
 <style scoped>
+.text-under-img {
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
 .btn-close {
   font-size: 30px;
   margin-right: 1em;

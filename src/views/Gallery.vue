@@ -2,12 +2,8 @@
   <div>
     <WideHeader>Gallery</WideHeader>
     <CenterGrid>
-
-      <GalleryItem description="this is some text" img-src="./banner.png"/>
-      <GalleryItem description="this is also some text" img-src="./banner.png"/>
-      <GalleryItem description="very interesting text" img-src="./banner.png"/>
-      <GalleryItem :grid-span="6" description="this is an example that has a caption" caption="this is a caption" img-src="./banner.png"/>
-      <GalleryItem :grid-span="6" description="this is an example that does not have a caption" img-src="./banner.png"/>
+      <GalleryItem v-for="item in items" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
+                   :description="item.description" :key="item.key"/>
     </CenterGrid>
   </div>
 </template>
@@ -17,36 +13,26 @@ import WideHeader from "@/components/WideHeader";
 import CenterGrid from "@/components/CenterGrid";
 import GalleryItem from "@/components/GalleryItem";
 
+// const axios = require('axios').default;
+
+
 export default {
   name: "Projects",
   components: {GalleryItem, CenterGrid, WideHeader},
+  props: {
+    itemList: {
+      type: String,
+      required: false,
+      default: './cd.json'
+    }
+  },
+  mounted: function () {
+    const json = require.context("../assets/json", false, /.*\.json$/)
+    this.items = json(this.itemList)
+  },
   data: function () {
     return {
-      items: [{
-        description: "",
-        gridSpan: 4,
-        imgSrc: "../assets/banner.png"
-      },{
-        description: "",
-        caption: "",
-        gridSpan: 4,
-        imgSrc: "../assets/banner.png"
-      },{
-        description: "",
-        caption: "",
-        gridSpan: 4,
-        imgSrc: "../assets/banner.png"
-      },{
-        description: "",
-        caption: "",
-        gridSpan: 6,
-        imgSrc: "../assets/banner.png"
-      },{
-        description: "",
-        caption: "",
-        gridSpan: 6,
-        imgSrc: "../assets/banner.png"
-      },]
+      items: []
     }
   }
 }
