@@ -5,6 +5,9 @@
   </transition>
   <transition type="transition" appear>
     <div class="modal" role="dialog">
+      <div class="btn-close">
+        <i @click="$emit('modal-overlay-click')" id="btn-close" class="far fa-window-close"></i>
+      </div>
       <img class="modal-img" :src="this.imgSrc" alt="bigger img">
       <h2 v-if="this.caption">{{ this.caption }}</h2>
       <h3>{{ this.description }}</h3>
@@ -36,6 +39,17 @@ export default {
 </script>
 
 <style scoped>
+.btn-close{
+  font-size: 30px;
+  margin-right: 1em;
+  text-align: right;
+  height: 1em;
+}
+#btn-close {
+  cursor: pointer;
+  position: fixed;
+  margin-bottom: 10px;
+}
 
 .modal {
   position: fixed;
@@ -57,6 +71,7 @@ export default {
 }
 
 .modal-img {
+  /*border: solid 1px;*/
   object-fit: contain;
   width: 50vw;
   height: 50vw
