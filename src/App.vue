@@ -10,17 +10,14 @@
       </div>
     </nav>
   </div>
-  <div>
-    <router-view/>
-  </div>
+  <router-view class="router-view"/>
 </template>
-
 <script>
 
 
 export default {
   name: "App",
-  data: function (){
+  data: function () {
     return {
       barImgSrc: require("@/assets/bar.svg")
     }
@@ -42,21 +39,23 @@ export default {
   width: 100%;
 }
 
+.router-view{
+  margin-top: 30px;
+}
+
 #nav-canvas {
   position: relative;
+  height: 104px;
 }
 
 #nav-img {
-  position:absolute;
-  z-index:-1;
-  top:-70px;
-  left:0;
-  /*overflow-x: hidden !important;*/
-  /*overflow-y: hidden !important;*/
-  width:100%; /* alternative: right:0; */
-  height:174px;
-  object-fit: fill ;
-  /*border: solid 2px black;*/
+  position: absolute;
+  z-index: -1;
+  top: -70px;
+  left: 0;
+  width: 100%;
+  height: 174px;
+  object-fit: fill;
 }
 
 nav {
@@ -85,14 +84,16 @@ nav a.router-link-exact-active {
 
 @media only screen and (max-width: 768px) {
 
+  #nav-canvas{
+    height: 74px;
+  }
   #nav-img {
-    position:absolute;
-    z-index:-1;
-    top:-100px;
-    left:0;
-    width:100%; /* alternative: right:0; */
-    height:174px;
-    /*border: solid 2px black;*/
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 174px;
   }
 }
 
