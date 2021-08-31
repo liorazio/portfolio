@@ -2,21 +2,13 @@
   <CenterGridItem :gridSpan="this.gridSpan">
     <figure>
       <img
-          @click="showModal = true"
+          @click="showModal = windowInnerWidthBig"
           :class="'gallery-img img-grid-x' + gridSpanCalc +'-span'"
           :src="pictureStatic" alt="gallery image"/>
-      <transition v-if="showModal" type="transition" appear>
-        <div class="modal-overlay" v-if="showModal" @click="showModal=false">
-        </div>
-      </transition>
-      <transition v-if="showModal" type="transition" appear>
-        <div class="modal" role="dialog">
-          <img class="modal-img img-grid-x12-span" :src="pictureStatic" alt="bigger img">
-          <h2 v-if="caption">{{ caption }}</h2>
-          <h3>{{ description }}</h3>
-        </div>
-      </transition>
-
+      <div v-if="windowInnerWidthBig">
+        <GalleryItemModal v-if="showModal" :imgSrc="pictureStatic" :caption="caption" :description="description"
+                          @modal-overlay-click="showModal = false"/>
+      </div>
       <figcaption>
         <h2 v-if="caption">{{ caption }}</h2>
         <h3>{{ description }}</h3>
@@ -28,10 +20,11 @@
 <script>
 import {uuid} from 'vue-uuid';
 import CenterGridItem from "@/components/CenterGridItem";
+import GalleryItemModal from "@/components/GalleryItemModal";
 
 export default {
   name: "GalleryItem",
-  components: {CenterGridItem},
+  components: {GalleryItemModal, CenterGridItem},
   props: {
     gridSpan: {
       type: Number,
@@ -52,14 +45,15 @@ export default {
       type: String,
       required: true
     }
-
   },
   methods: {
     onResize: function () {
       //img style caclucalte for resize
       if (window.innerWidth > 768) {
+        this.windowInnerWidthBig = true
         this.gridSpanCalc = this.gridSpan;
       } else {
+        this.windowInnerWidthBig = false
         this.gridSpanCalc = 12;
       }
     },
@@ -77,6 +71,7 @@ export default {
       showModal: false,
       gridSpanCalc: this.gridSpan,
       pictureStatic: images(this.imgSrc),
+      windowInnerWidthBig: false
     }
   },
   computed: {
@@ -90,43 +85,6 @@ export default {
 </script>
 
 <style scoped>
-
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  text-align: center;
-  width: fit-content;
-  height: fit-content;
-  /*max-width: 22em;*/
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-  background: #FFF;
-  z-index: 999;
-  transform: none;
-}
-
-.modal-img{
-  object-fit: contain;
-}
-
-.modal-overlay {
-  content: '';
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 998;
-  background: #2c3e50;
-  opacity: 0.6;
-  cursor: pointer;
-}
-
 figcaption {
   display: none;
 }
@@ -161,6 +119,7 @@ figcaption {
 @media only screen and (max-width: 768px) {
 
   .img-grid-x12-span {
+    object-fit: contain;
     width: 90vw;
     height: 90vw
   }
