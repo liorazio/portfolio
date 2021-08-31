@@ -121,7 +121,7 @@ figcaption {
   .img-grid-x12-span {
     object-fit: contain;
     width: 90vw;
-    height: 90vw
+    height: auto;
   }
 
   figcaption {
