@@ -71,10 +71,9 @@ export default {
 }
 
 .modal-img {
-  /*border: solid 1px;*/
   object-fit: contain;
-  width: 50vw;
-  height: 50vw
+  width: 78vh;
+  height: 78vh
 }
 
 .modal-overlay {
@@ -88,13 +87,5 @@ export default {
   background: #2c3e50;
   opacity: 0.6;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 768px) {
-  .modal-img {
-    object-fit: contain;
-    width: 90vw;
-    height: 90vw
-  }
 }
 </style>
