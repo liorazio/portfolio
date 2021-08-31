@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Projects from "../views/Projects";
+import Gallery from "../views/Gallery.vue";
 
 const routes = [
   {
@@ -20,7 +20,7 @@ const routes = [
   {
     path: '/stam',
     name: 'Stam',
-    component: Projects
+    component: Gallery
   }
 ]
 

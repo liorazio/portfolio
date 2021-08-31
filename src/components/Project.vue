@@ -1,7 +1,6 @@
 <template>
   <CenterGridItem :gridSpan="this.gridSpan">
     <figure>
-      <!--          :style="imgStyle"-->
       <img
           @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
           :class="'img-grid-x' + gridSpanCalc +'-span'"
@@ -71,10 +70,6 @@ export default {
       hover: false,
       gridSpanCalc: this.gridSpan,
       pictureStatic: require("../assets/banner.png"),
-      imgStyle: {
-        'width': '90vw',
-        'height': '64.5vw'
-      }
     }
   },
   computed: {
