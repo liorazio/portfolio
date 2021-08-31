@@ -39,12 +39,13 @@ export default {
 </script>
 
 <style scoped>
-.btn-close{
+.btn-close {
   font-size: 30px;
   margin-right: 1em;
   text-align: right;
   height: 1em;
 }
+
 #btn-close {
   cursor: pointer;
   position: fixed;
@@ -72,8 +73,8 @@ export default {
 
 .modal-img {
   object-fit: contain;
-  width: 78vh;
-  height: 78vh
+  width: min(75vh, 50vw);
+  height: min(75vh, 50vw);
 }
 
 .modal-overlay {
