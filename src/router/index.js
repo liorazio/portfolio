@@ -22,12 +22,15 @@ const routes = [
         name: 'Gallery',
         component: Gallery,
         props: true
-    }
+    },
 ]
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes
+    routes: routes,
+    scrollBehavior: function () {
+        return {left: 0, top: 0}
+    }
 })
 
 export default router
