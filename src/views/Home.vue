@@ -12,7 +12,7 @@
         <CenterGrid>
           <Project title="Character design" imgSrc="./cd/pandalady.jpg"
                    :routeTo="{name: 'Gallery', params: {itemList: './cd.json'}}"/>
-          <Project title="Gifs" imgSrc="./gifs/dog1.jpg"
+          <Project title="Gifs" imgSrc="./gifs/dog1.gif"
                    :routeTo="{name: 'Gallery', params: {itemList: './gifs.json'}}"/>
           <Project title="Golden aggle" imgSrc="./golden/logo.jpg"
                    :routeTo="{name: 'Gallery', params: {itemList: './golden.json'}}"/>

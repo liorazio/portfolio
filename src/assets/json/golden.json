@@ -1,7 +1,12 @@
 [
   {
+    "imgSrc": "./golden/poster.jpg",
+    "gridSpan": 6,
+    "description": "The idea behind the design of the Aggle logo"
+  },
+  {
     "imgSrc": "./golden/logo.jpg",
-    "gridSpan": 4,
+    "gridSpan": 6,
     "description": "The idea behind the design of the Aggle logo"
   },
   {

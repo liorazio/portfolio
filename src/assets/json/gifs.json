@@ -1,56 +1,56 @@
 [
   {
-    "imgSrc": "./gifs/runsmall.jpg",
+    "imgSrc": "./gifs/runsmall.gif",
     "gridSpan": 6,
     "description": "running squirrel classic animation "
   },
   {
-    "imgSrc": "./gifs/dinoshok.jpg",
+    "imgSrc": "./gifs/dinoshok.gif",
     "gridSpan": 6,
     "description": "game style creature animation. illustration and concept by me. "
   },
   {
-    "imgSrc": "./gifs/dog1.jpg",
+    "imgSrc": "./gifs/dog1.gif",
     "gridSpan": 4,
     "description": "panting corgi "
   },
   {
-    "imgSrc": "./gifs/dogosit.jpg",
+    "imgSrc": "./gifs/dogosit.gif",
     "gridSpan": 4,
     "description": "panting dog for a game concept"
   },
   {
-    "imgSrc": "./gifs/dogorun.jpg",
+    "imgSrc": "./gifs/dogorun.gif",
     "gridSpan": 4,
     "description": "running dog for a game concept "
   },
   {
-    "imgSrc": "./gifs/dogjump2.jpg",
+    "imgSrc": "./gifs/dogjump2.gif",
     "gridSpan": 6,
     "description": "jumping dog loop "
   },
   {
-    "imgSrc": "./gifs/sleep.jpg",
+    "imgSrc": "./gifs/sleep.gif",
     "gridSpan": 6,
     "description": "Animation loop for Abook, a book about being a first time father"
   },
   {
-    "imgSrc": "./gifs/fish.jpg",
+    "imgSrc": "./gifs/fish1.gif",
     "gridSpan": 4,
     "description": "small animation loop, part of a movie about india"
   },
   {
-    "imgSrc": "./gifs/belly_yel.jpg",
+    "imgSrc": "./gifs/belly_yel.gif",
     "gridSpan": 4,
     "description": "Animation loop for Abook, a book about being a first time father"
   },
   {
-    "imgSrc": "./gifs/dogjump1.jpg",
+    "imgSrc": "./gifs/dogjump1.gif",
     "gridSpan": 4,
     "description": "Another style of a jumping dog"
   },
   {
-    "imgSrc": "./gifs/kattaplle.jpg",
+    "imgSrc": "./gifs/kattaplle.gif",
     "gridSpan": 4,
     "description": "An apple to a kettle"
   }
