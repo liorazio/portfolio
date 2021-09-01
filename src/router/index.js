@@ -18,11 +18,31 @@ const routes = [
         component: About
     },
     {
-        path: '/gallery',
-        name: 'Gallery',
+        path: '/character-design',
+        name: 'cd',
         component: Gallery,
-        props: true
-    },
+        props: {itemList: './cd.json'}
+    },{
+        path: '/gifs',
+        name: 'gifs',
+        component: Gallery,
+        props: {itemList: './gifs.json'}
+    },{
+        path: '/golden-aggle',
+        name: 'golden',
+        component: Gallery,
+        props: {itemList: './golden.json'}
+    },{
+        path: '/illustrations',
+        name: 'illust',
+        component: Gallery,
+        props: {itemList: './illust.json'}
+    },{
+        path: '/sketch-book',
+        name: 'sketch',
+        component: Gallery,
+        props: {itemList: './sketch.json'}
+    }
 ]
 
 const router = createRouter({

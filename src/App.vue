@@ -4,9 +4,33 @@
     <nav>
       <div>Lior Raz</div>
       <div>
-        <router-link to="/">Work</router-link>
-        |
-        <router-link to="/about">About</router-link>
+        <ul class="top-level">
+          <li>
+            Galleries &nbsp;|&nbsp;
+            <ul class="menu-level">
+              <li>
+                <router-link :to="{name:'cd'}">Character design</router-link>
+              </li>
+              <li>
+                <router-link :to="{name:'gifs'}">Gifs</router-link>
+              </li>
+              <li>
+                <router-link :to="{name:'golden'}">Golden aggle</router-link>
+              </li>
+              <li>
+                <router-link :to="{name:'illust'}">Illustrations</router-link>
+              </li>
+              <li>
+                <router-link :to="{name:'sketch'}">Sketch book</router-link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <router-link to="/">Work</router-link>
+            |
+            <router-link to="/about">About</router-link>
+          </li>
+        </ul>
       </div>
     </nav>
   </div>
@@ -39,7 +63,48 @@ export default {
   width: 100%;
 }
 
-.router-view{
+li {
+  display: block;
+  float: left;
+  padding: 1rem;
+  line-height: 0;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+
+li:hover {
+  cursor: pointer;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  width: 10em;
+  object-position: center;
+  text-align: center;
+}
+
+ul li ul li:hover {
+  border: solid 1px black;
+
+}
+
+.router-view {
   margin-top: 30px;
 }
 
@@ -84,9 +149,10 @@ nav a.router-link-exact-active {
 
 @media only screen and (max-width: 768px) {
 
-  #nav-canvas{
+  #nav-canvas {
     height: 74px;
   }
+
   #nav-img {
     position: absolute;
     z-index: -1;

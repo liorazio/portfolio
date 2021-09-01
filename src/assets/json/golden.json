@@ -2,22 +2,22 @@
   {
     "imgSrc": "./golden/poster.jpg",
     "gridSpan": 6,
-    "description": "The idea behind the design of the Aggle logo"
+    "description": "The final poster"
+  },
+  {
+    "imgSrc": "./golden/char.jpg",
+    "gridSpan": 6,
+    "description": "Instead of one main character, every rule was supposed to be represented with a different person "
   },
   {
     "imgSrc": "./golden/logo.jpg",
-    "gridSpan": 6,
+    "gridSpan": 4,
     "description": "The idea behind the design of the Aggle logo"
   },
   {
     "imgSrc": "./golden/monk.jpg",
     "gridSpan": 4,
     "description": "Very early concept work"
-  },
-  {
-    "imgSrc": "./golden/char.jpg",
-    "gridSpan": 4,
-    "description": "Instead of one main character, every rule was supposed to be represented with a different person "
   },
   {
     "imgSrc": "./golden/artwork.jpg",

@@ -4,27 +4,29 @@
     <div class="canvas"><img alt="liorazio banner" src="../assets/banner.png"></div>
     <!--    <iframe src="https://www.youtube.com/embed/KoT_5IM2AKM"/>-->
 
-    <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"
+<!--    <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"-->
+<!--            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
+        <iframe class="video" src="https://www.youtube.com/embed/3cYSsiwgX-w?modestbranding=1&rel=0&disablekb=1"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
     <section>
       <div id="projects">
         <WideHeader>Projects</WideHeader>
         <CenterGrid>
           <Project title="Character design" imgSrc="./cd/pandalady.jpg"
-                   :routeTo="{name: 'Gallery', params: {itemList: './cd.json'}}"/>
+                   :routeTo="{name: 'cd'}"/>
           <Project title="Gifs" imgSrc="./gifs/dog1.gif"
-                   :routeTo="{name: 'Gallery', params: {itemList: './gifs.json'}}"/>
+                   :routeTo="{name: 'gifs'}"/>
           <Project title="Golden aggle" imgSrc="./golden/logo.jpg"
-                   :routeTo="{name: 'Gallery', params: {itemList: './golden.json'}}"/>
+                   :routeTo="{name: 'golden'}"/>
           <Project :grid-span="6" title="Illustrations" imgSrc="./illust/dogskate.jpg"
-                   :routeTo="{name: 'Gallery', params: {itemList: './illust.json'}}"/>
+                   :routeTo="{name: 'illust'}"/>
           <Project :grid-span="6" title="Sketch book" imgSrc="./sketch/bunnies.jpg"
-                   :routeTo="{name: 'Gallery', params: {itemList: './sketch.json'}}"/>
+                   :routeTo="{name: 'sketch'}"/>
         </CenterGrid>
       </div>
     </section>
     <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
-<!--    <video src="https://i.giphy.com/media/K8bIH5Z2dos1lTU9Pc/giphy.mp4" autoplay loop />-->
   </div>
 </template>
 
