@@ -13,9 +13,17 @@
       making animations, music clips, book designs, illustrations and many more.
     </p>
     <h3 class="first-line"> Lets have fun!</h3>
+    <h4 class="first-line">Contact me:</h4>
+    <h3 class="first-line"><a class="mail" href="mailto:lior.raaz@gmail.com">lior.raaz@gmail.com</a></h3>
+    <h4 class="first-line">
+      <a href="https://www.facebook.com/Liorazioo" target="_blank"><i class="social fab fa-facebook-square"></i></a>
+      &nbsp;&nbsp;
+      <a href="https://instagram.com/liorazio" target="_blank"><i class="social fab fa-instagram-square"></i></a>
+    </h4>
     <div>
       <img :src="pictureStatic" alt="about me">
     </div>
+    <h3></h3>
   </div>
 
 </template>
@@ -36,6 +44,16 @@ export default {
 
 
 <style scoped>
+.mail {
+  color: gray;
+  text-decoration: none;
+}
+
+.social {
+  color: gray;
+  font-size: 40px;
+}
+
 .header {
   margin-top: 30px;
 }

@@ -13,15 +13,15 @@
       <div id="projects">
         <WideHeader>Projects</WideHeader>
         <CenterGrid>
-          <Project title="Character design" imgSrc="./cd/pandalady.jpg"
+          <Project title="Character design" imgSrc="./cd/cdthumb.jpg"
                    :routeTo="{name: 'cd'}"/>
           <Project title="Gifs" imgSrc="./gifs/dogosit.gif"
                    :routeTo="{name: 'gifs'}"/>
-          <Project title="Golden aggle" imgSrc="./golden/poster.jpg"
+          <Project title="Golden aggle" imgSrc="./golden/goldenthumb.jpg"
                    :routeTo="{name: 'golden'}"/>
-          <Project :grid-span="6" title="Illustrations" imgSrc="./illust/dogskate.jpg"
+          <Project :grid-span="6" title="Illustrations" imgSrc="./illust/illustthumb.jpg"
                    :routeTo="{name: 'illust'}"/>
-          <Project :grid-span="6" title="Sketch book" imgSrc="./sketch/bunnies.jpg"
+          <Project :grid-span="6" title="Sketch book" imgSrc="./sketch/sketchthumb.jpg"
                    :routeTo="{name: 'sketch'}"/>
         </CenterGrid>
       </div>

@@ -1,72 +1,74 @@
-[
-  {
-    "imgSrc": "./sketch/bunnies.jpg",
-    "gridSpan": 6,
-    "description": "Sketchs for a book "
-  },
-  {
-    "imgSrc": "./sketch/bunns.jpg",
-    "gridSpan": 6,
-    "description": "Zombie bunnies for a card game "
-  },
-  {
-    "imgSrc": "./sketch/colors.jpg",
-    "gridSpan": 4,
-    "description": "Quick interpretation of shapes"
-  },
-  {
-    "imgSrc": "./sketch/cat_lady.jpg",
-    "gridSpan": 4,
-    "description": "Cats are known to love strings "
-  },
-  {
-    "imgSrc": "./sketch/cats.jpg",
-    "gridSpan": 4,
-    "description": "more shape inerpretation "
-  },
-  {
-    "imgSrc": "./sketch/comics1.jpg",
-    "gridSpan": 6,
-    "description": "a short comics, is featured in the book \"A7 המהפכה\""
-  },
-  {
-    "imgSrc": "./sketch/comic.jpg",
-    "gridSpan": 6,
-    "description": "after living with a cat for some time"
-  },
-  {
-    "imgSrc": "./sketch/horse.jpg",
-    "gridSpan": 4,
-    "description": "A pony for a childern book "
-  },
-  {
-    "imgSrc": "./sketch/cows.jpg",
-    "gridSpan": 4,
-    "description": "Concept sketches for Golden aggle"
-  },
-  {
-    "imgSrc": "./sketch/lady.jpg",
-    "gridSpan": 4,
-    "description": "Early charecter design for Golden aggle"
-  },
-  {
-    "imgSrc": "./sketch/girl1.jpg",
-    "gridSpan": 6,
-    "description": "was featured in כולעיצוב"
-  },
-  {
-    "imgSrc": "./sketch/girl2.jpg",
-    "gridSpan": 6,
-    "description": "another sketch with the same girl"
-  },
-  {
-    "imgSrc": "./sketch/pink.jpg",
-    "gridSpan": 4,
-    "description": "Early charecter design for Golden aggle"
-  },
-  {
-    "imgSrc": "./sketch/tigers.jpg",
-    "gridSpan": 4,
-    "description": "tigers in woods pattern"
-  }
-]
+{
+  "items": [
+    {
+      "imgSrc": "./sketch/bunnies.jpg",
+      "gridSpan": 6,
+      "description": "Sketchs for a book "
+    },
+    {
+      "imgSrc": "./sketch/bunns.jpg",
+      "gridSpan": 6,
+      "description": "Zombie bunnies for a card game "
+    },
+    {
+      "imgSrc": "./sketch/colors.jpg",
+      "gridSpan": 4,
+      "description": "Quick interpretation of shapes"
+    },
+    {
+      "imgSrc": "./sketch/cat_lady.jpg",
+      "gridSpan": 4,
+      "description": "Cats are known to love strings "
+    },
+    {
+      "imgSrc": "./sketch/cats.jpg",
+      "gridSpan": 4,
+      "description": "more shape inerpretation "
+    },
+    {
+      "imgSrc": "./sketch/comics1.jpg",
+      "gridSpan": 6,
+      "description": "a short comics, is featured in the book \"A7 המהפכה\""
+    },
+    {
+      "imgSrc": "./sketch/comic.jpg",
+      "gridSpan": 6,
+      "description": "after living with a cat for some time"
+    },
+    {
+      "imgSrc": "./sketch/horse.jpg",
+      "gridSpan": 4,
+      "description": "A pony for a childern book "
+    },
+    {
+      "imgSrc": "./sketch/cows.jpg",
+      "gridSpan": 4,
+      "description": "Concept sketches for Golden aggle"
+    },
+    {
+      "imgSrc": "./sketch/lady.jpg",
+      "gridSpan": 4,
+      "description": "Early charecter design for Golden aggle"
+    },
+    {
+      "imgSrc": "./sketch/girl1.jpg",
+      "gridSpan": 6,
+      "description": "was featured in כולעיצוב"
+    },
+    {
+      "imgSrc": "./sketch/girl2.jpg",
+      "gridSpan": 6,
+      "description": "another sketch with the same girl"
+    },
+    {
+      "imgSrc": "./sketch/pink.jpg",
+      "gridSpan": 4,
+      "description": "Early charecter design for Golden aggle"
+    },
+    {
+      "imgSrc": "./sketch/tigers.jpg",
+      "gridSpan": 4,
+      "description": "tigers in woods pattern"
+    }
+  ]
+}

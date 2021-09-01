@@ -21,27 +21,27 @@ const routes = [
         path: '/character-design',
         name: 'cd',
         component: Gallery,
-        props: {itemList: './cd.json'}
+        props: {itemList: './cd.json', heading: 'Character design'}
     },{
         path: '/gifs',
         name: 'gifs',
         component: Gallery,
-        props: {itemList: './gifs.json'}
+        props: {itemList: './gifs.json', heading: 'Gifs'}
     },{
         path: '/golden-aggle',
         name: 'golden',
         component: Gallery,
-        props: {itemList: './golden.json'}
+        props: {itemList: './golden.json', heading: 'Golden aggle'}
     },{
         path: '/illustrations',
         name: 'illust',
         component: Gallery,
-        props: {itemList: './illust.json'}
+        props: {itemList: './illust.json', heading: 'Illustrations'}
     },{
         path: '/sketch-book',
         name: 'sketch',
         component: Gallery,
-        props: {itemList: './sketch.json'}
+        props: {itemList: './sketch.json', heading: 'Sketch book'}
     }
 ]
 

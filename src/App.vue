@@ -8,7 +8,6 @@
       <div>
         <ul class="top-level">
           <li>
-
             <router-link to="/">Work</router-link>
             |
             <router-link to="/about">About</router-link>
@@ -17,6 +16,9 @@
             &nbsp;|
             Galleries
             <ul class="menu-level">
+              <li class="empty-menu-line">
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              </li>
               <li>
                 <router-link :to="{name:'cd'}">Character design</router-link>
               </li>
@@ -83,7 +85,9 @@ export default {
 .galleries {
   margin-right: 4rem;
 }
-
+.empty-menu-line:hover{
+  box-shadow: none;
+}
 li {
   display: block;
   float: left;

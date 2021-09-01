@@ -1,87 +1,84 @@
-[
-  {
-    "imgSrc": "./illust/dogskate.jpg",
-    "gridSpan": 6,
-    "description": "Skating shiba "
-  },
-  {
-    "imgSrc": "./illust/dragon.jpg",
-    "gridSpan": 6,
-    "description": "Dragon dear"
-  },
-  {
-    "imgSrc": "./illust/bubbles.jpg",
-    "gridSpan": 4,
-    "description": "Illustration for Perrier"
-  },
-  {
-    "imgSrc": "./illust/Original_Tortellini.jpg",
-    "gridSpan": 4,
-    "description": "Tortellini"
-  },
-  {
-    "imgSrc": "./illust/parrot.jpg",
-    "gridSpan": 4,
-    "description": "Cockatiel enjoying the sun"
-  },
-  {
-    "imgSrc": "./illust/karovka.jpg",
-    "gridSpan": 6,
-    "description": "Russian snack"
-  },
-  {
-    "imgSrc": "./illust/salmon.jpg",
-    "gridSpan": 6,
-    "description": "Salmon dish"
-  },
-  {
-    "imgSrc": "./illust/bisli.jpg",
-    "gridSpan": 4,
-    "description": "Bisli"
-  },
-  {
-    "imgSrc": "./illust/eat.jpg",
-    "gridSpan": 4,
-    "description": "Demo before a screen printing"
-  },
-  {
-    "imgSrc": "./illust/poster.jpg",
-    "gridSpan": 4,
-    "description": "Illustration for a movie pitch"
-  },
-  {
-    "imgSrc": "./illust/bear.jpg",
-    "gridSpan": 4,
-    "description": "A monster from a child imagination. was featured in \"פרויקט מפלצתי 2019\""
-  },
-  {
-    "imgSrc": "./illust/camel.jpg",
-    "gridSpan": 4,
-    "description": "A water color illustration for a children book "
-  },
-  {
-    "imgSrc": "./illust/black.jpg",
-    "gridSpan": 4,
-    "description": "a black cat"
-  },
-  {
-    "imgSrc": "./illust/dogcool.jpg",
-    "gridSpan": 4,
-    "description": "styled dog"
-  },
-  {
-    "imgSrc": "./illust/pidgeon.jpg",
-    "gridSpan": 4,
-    "description": "skating bird"
-  },
-  {
-    "imgSrc": "./illust/pidge.jpg",
-    "gridSpan": 4,
-    "description": "sticker design"
-  },
-  {
-    "imgSrc": "./illust/pig.jpg",
-    "gridSpan": 4,
-    "description": "greeting card design"
-  }
-]
+{
+  "items": [
+    {
+      "imgSrc": "./illust/dogskate.jpg",
+      "gridSpan": 6,
+      "description": "Skating shiba "
+    },
+    {
+      "imgSrc": "./illust/dragon.jpg",
+      "gridSpan": 6,
+      "description": "Dragon dear"
+    },
+    {
+      "imgSrc": "./illust/bubbles.jpg",
+      "gridSpan": 4,
+      "description": "Illustration for Perrier"
+    },
+    {
+      "imgSrc": "./illust/Original_Tortellini.jpg",
+      "gridSpan": 4,
+      "description": "Tortellini"
+    },
+    {
+      "imgSrc": "./illust/parrot.jpg",
+      "gridSpan": 4,
+      "description": "Cockatiel enjoying the sun"
+    },
+    {
+      "imgSrc": "./illust/karovka.jpg",
+      "gridSpan": 6,
+      "description": "Russian snack"
+    },
+    {
+      "imgSrc": "./illust/salmon.jpg",
+      "gridSpan": 6,
+      "description": "Salmon dish"
+    },
+    {
+      "imgSrc": "./illust/bisli.jpg",
+      "gridSpan": 4,
+      "description": "Bisli"
+    },
+    {
+      "imgSrc": "./illust/eat.jpg",
+      "gridSpan": 4,
+      "description": "Demo before a screen printing"
+    },
+    {
+      "imgSrc": "./illust/poster.jpg",
+      "gridSpan": 4,
+      "description": "Illustration for a movie pitch"
+    },
+    {
+      "imgSrc": "./illust/bear.jpg",
+      "gridSpan": 4,
+      "description": "A monster from a child imagination. was featured in \"פרויקט מפלצתי 2019\""
+    },
+    {
+      "imgSrc": "./illust/camel.jpg",
+      "gridSpan": 4,
+      "description": "A water color illustration for a children book "
+    },
+    {
+      "imgSrc": "./illust/black.jpg",
+      "gridSpan": 4,
+      "description": "a black cat"
+    },
+    {
+      "imgSrc": "./illust/pidgeon.jpg",
+      "gridSpan": 4,
+      "description": "skating bird"
+    },
+    {
+      "imgSrc": "./illust/pidge.jpg",
+      "gridSpan": 4,
+      "description": "sticker design"
+    },
+    {
+      "imgSrc": "./illust/pig.jpg",
+      "gridSpan": 4,
+      "description": "greeting card design"
+    }
+  ]
+}
