@@ -49,10 +49,6 @@ export default {
   text-decoration: none;
 }
 
-.social {
-  color: gray;
-  font-size: 40px;
-}
 
 .header {
   margin-top: 30px;

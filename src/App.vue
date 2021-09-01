@@ -8,7 +8,7 @@
       <div>
         <ul class="top-level">
           <li>
-            <router-link to="/">Work</router-link>
+            <router-link to="/">Home</router-link>
             |
             <router-link to="/about">About</router-link>
           </li>
@@ -41,6 +41,14 @@
     </nav>
   </div>
   <router-view class="router-view"/>
+  <footer>
+    <h4 class="first-line">
+      <a href="https://www.facebook.com/Liorazioo" target="_blank"><i class="social fab fa-facebook-square"></i></a>
+      &nbsp;&nbsp;
+      <a href="https://instagram.com/liorazio" target="_blank"><i class="social fab fa-instagram-square"></i></a>
+    </h4>
+    <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
+  </footer>
 </template>
 <script>
 
@@ -80,6 +88,15 @@ export default {
   padding: 0;
   margin: 0;
   width: 100%;
+}
+
+.social {
+  color: gray;
+  margin-bottom: 1rem;
+  font-size: 40px;
+}
+.copyright {
+  padding-bottom: 30px;
 }
 
 .galleries {

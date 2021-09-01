@@ -26,7 +26,7 @@
         </CenterGrid>
       </div>
     </section>
-    <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
+
   </div>
 </template>
 
@@ -51,6 +51,7 @@ export default {
   margin-top: 3rem;
 }
 
+
 .video {
   margin-top: 30px;
   border: solid 15px #fb826b;
@@ -67,9 +68,6 @@ export default {
   width: 35%;
 }
 
-.copyright {
-  padding-bottom: 30px;
-}
 
 @media only screen and (max-width: 768px) {
   #projects {
