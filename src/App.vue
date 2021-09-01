@@ -2,17 +2,26 @@
   <div id="nav-canvas">
     <img id="nav-img" :src="barImgSrc" alt="bar">
     <nav>
-      <div>Lior Raz</div>
+      <div>
+        <router-link to="/">Lior Raz</router-link>
+      </div>
       <div>
         <ul class="top-level">
           <li>
-            Galleries &nbsp;|&nbsp;
+
+            <router-link to="/">Work</router-link>
+            |
+            <router-link to="/about">About</router-link>
+          </li>
+          <li v-if="windowInnerWidthBig" class="galleries">
+            &nbsp;|
+            Galleries
             <ul class="menu-level">
               <li>
                 <router-link :to="{name:'cd'}">Character design</router-link>
               </li>
               <li>
-                <router-link :to="{name:'gifs'}">Gifs</router-link>
+                <router-link :to="{name:'gifs'}">Gifs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</router-link>
               </li>
               <li>
                 <router-link :to="{name:'golden'}">Golden aggle</router-link>
@@ -24,11 +33,6 @@
                 <router-link :to="{name:'sketch'}">Sketch book</router-link>
               </li>
             </ul>
-          </li>
-          <li>
-            <router-link to="/">Work</router-link>
-            |
-            <router-link to="/about">About</router-link>
           </li>
         </ul>
       </div>
@@ -43,9 +47,22 @@ export default {
   name: "App",
   data: function () {
     return {
-      barImgSrc: require("@/assets/bar.svg")
+      barImgSrc: require("@/assets/bar.svg"),
+      windowInnerWidthBig: true
     }
-  }
+  },
+  methods: {
+    onResize: function () {
+      this.windowInnerWidthBig = window.innerWidth > 768;
+    }
+  },
+  mounted() {
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.onResize)
+  },
 }
 </script>
 
@@ -63,10 +80,15 @@ export default {
   width: 100%;
 }
 
+.galleries {
+  margin-right: 4rem;
+}
+
 li {
   display: block;
   float: left;
-  padding: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   line-height: 0;
   position: relative;
   text-decoration: none;
@@ -100,8 +122,7 @@ ul li ul:hover {
 }
 
 ul li ul li:hover {
-  border: solid 1px black;
-
+  box-shadow: 1px 1px 2px 2px black;
 }
 
 .router-view {

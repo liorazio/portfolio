@@ -106,7 +106,7 @@ figcaption {
 
 
 .gallery-img {
-  border: 1px solid;
+  box-shadow: 2px 2px 4px #000000;
   object-fit: cover;
   object-position: center center;
   transform: scale(1);
@@ -130,7 +130,7 @@ figcaption {
   }
 
   .gallery-img {
-    border: solid 1px;
+    box-shadow: 2px 2px 4px #000000;
     transition: none;
     transform: none;
   }

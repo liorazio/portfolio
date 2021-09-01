@@ -15,9 +15,9 @@
         <CenterGrid>
           <Project title="Character design" imgSrc="./cd/pandalady.jpg"
                    :routeTo="{name: 'cd'}"/>
-          <Project title="Gifs" imgSrc="./gifs/dog1.gif"
+          <Project title="Gifs" imgSrc="./gifs/dogosit.gif"
                    :routeTo="{name: 'gifs'}"/>
-          <Project title="Golden aggle" imgSrc="./golden/logo.jpg"
+          <Project title="Golden aggle" imgSrc="./golden/poster.jpg"
                    :routeTo="{name: 'golden'}"/>
           <Project :grid-span="6" title="Illustrations" imgSrc="./illust/dogskate.jpg"
                    :routeTo="{name: 'illust'}"/>

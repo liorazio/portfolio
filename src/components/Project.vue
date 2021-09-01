@@ -132,7 +132,7 @@ figcaption {
 
 
 img {
-  border: 1px solid;
+  box-shadow: 2px 2px 4px #000000;
   object-fit: cover;
   transform: scale(1);
   transition: all 0.3s ease-in-out;
@@ -160,7 +160,7 @@ img:hover {
   }
 
   img {
-    border: solid 1px;
+    box-shadow: 2px 2px 4px #000000;
     transition: none;
     transform: none;
   }
