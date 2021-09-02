@@ -48,17 +48,17 @@
     {
       "imgSrc": "./cd/aliandude.jpg",
       "gridSpan": 4,
-      "description": "from the imagination of a child, was featured in \"פרויקט מפלצתי 2020\""
+      "description": "From the imagination of a child, was featured in \"פרויקט מפלצתי 2020\""
     },
     {
       "imgSrc": "./cd/dogcool.jpg",
       "gridSpan": 6,
-      "description": "styled dog"
+      "description": "Styled dog"
     },
     {
       "imgSrc": "./cd/beachrun.jpg",
       "gridSpan": 6,
-      "description": "styled dog"
+      "description": "Styled dog"
     }
   ]
 }

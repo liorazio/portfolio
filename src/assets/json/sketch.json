@@ -3,12 +3,12 @@
     {
       "imgSrc": "./sketch/bunnies.jpg",
       "gridSpan": 6,
-      "description": "Sketchs for a book "
+      "description": "Sketchs for a book"
     },
     {
       "imgSrc": "./sketch/bunns.jpg",
       "gridSpan": 6,
-      "description": "Zombie bunnies for a card game "
+      "description": "Zombie bunnies for a card game"
     },
     {
       "imgSrc": "./sketch/colors.jpg",
@@ -23,7 +23,7 @@
     {
       "imgSrc": "./sketch/cats.jpg",
       "gridSpan": 4,
-      "description": "more shape inerpretation "
+      "description": "More shape interpretation"
     },
     {
       "imgSrc": "./sketch/comics1.jpg",
@@ -33,12 +33,12 @@
     {
       "imgSrc": "./sketch/comic.jpg",
       "gridSpan": 6,
-      "description": "after living with a cat for some time"
+      "description": "After living with a cat for some time"
     },
     {
       "imgSrc": "./sketch/horse.jpg",
       "gridSpan": 4,
-      "description": "A pony for a childern book "
+      "description": "A pony for a children book "
     },
     {
       "imgSrc": "./sketch/cows.jpg",
@@ -68,7 +68,7 @@
     {
       "imgSrc": "./sketch/tigers.jpg",
       "gridSpan": 4,
-      "description": "tigers in woods pattern"
+      "description": "Tigers in woods pattern"
     }
   ]
 }

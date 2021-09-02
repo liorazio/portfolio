@@ -58,27 +58,27 @@
     {
       "imgSrc": "./illust/camel.jpg",
       "gridSpan": 4,
-      "description": "A water color illustration for a children book "
+      "description": "A water color illustration for a children book"
     },
     {
       "imgSrc": "./illust/black.jpg",
       "gridSpan": 4,
-      "description": "a black cat"
+      "description": "A black cat"
     },
     {
       "imgSrc": "./illust/pidgeon.jpg",
       "gridSpan": 4,
-      "description": "skating bird"
+      "description": "Skating bird"
     },
     {
       "imgSrc": "./illust/pidge.jpg",
       "gridSpan": 4,
-      "description": "sticker design"
+      "description": "Sticker design"
     },
     {
       "imgSrc": "./illust/pig.jpg",
       "gridSpan": 4,
-      "description": "greeting card design"
+      "description": "Greeting card design"
     }
   ]
 }

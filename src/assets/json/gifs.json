@@ -3,32 +3,32 @@
     {
       "imgSrc": "./gifs/runsmall.gif",
       "gridSpan": 6,
-      "description": "running squirrel classic animation "
+      "description": "Running squirrel classic animation"
     },
     {
       "imgSrc": "./gifs/dinoshok.gif",
       "gridSpan": 6,
-      "description": "game style creature animation. illustration and concept by me. "
+      "description": "Game style creature animation. Illustration and concept by me."
     },
     {
       "imgSrc": "./gifs/dog1.gif",
       "gridSpan": 4,
-      "description": "panting corgi "
+      "description": "Panting corgi"
     },
     {
       "imgSrc": "./gifs/dogosit.gif",
       "gridSpan": 4,
-      "description": "panting dog for a game concept"
+      "description": "Panting dog for a game concept"
     },
     {
       "imgSrc": "./gifs/dogorun.gif",
       "gridSpan": 4,
-      "description": "running dog for a game concept "
+      "description": "Running dog for a game concept"
     },
     {
       "imgSrc": "./gifs/dogjump2.gif",
       "gridSpan": 6,
-      "description": "jumping dog loop "
+      "description": "Jumping dog loop "
     },
     {
       "imgSrc": "./gifs/sleep.gif",
@@ -38,7 +38,7 @@
     {
       "imgSrc": "./gifs/fish1.gif",
       "gridSpan": 4,
-      "description": "small animation loop, part of a movie about india"
+      "description": "Small animation loop, part of a movie about india"
     },
     {
       "imgSrc": "./gifs/belly_yel.gif",
