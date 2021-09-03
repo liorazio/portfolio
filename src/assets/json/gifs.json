@@ -37,23 +37,13 @@
     },
     {
       "imgSrc": "./gifs/fish1.gif",
-      "gridSpan": 4,
+      "gridSpan": 6,
       "description": "Small animation loop, part of a movie about india"
     },
     {
       "imgSrc": "./gifs/belly_yel.gif",
-      "gridSpan": 4,
+      "gridSpan": 6,
       "description": "Animation loop for Abook, a book about being a first time father"
-    },
-    {
-      "imgSrc": "./gifs/dogjump1.gif",
-      "gridSpan": 4,
-      "description": "Another style of a jumping dog"
-    },
-    {
-      "imgSrc": "./gifs/kattaplle.gif",
-      "gridSpan": 4,
-      "description": "An apple to a kettle"
     }
   ]
 }

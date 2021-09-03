@@ -36,11 +36,6 @@
       "description": "Salmon dish"
     },
     {
-      "imgSrc": "./illust/bisli.jpg",
-      "gridSpan": 4,
-      "description": "Bisli"
-    },
-    {
       "imgSrc": "./illust/eat.jpg",
       "gridSpan": 4,
       "description": "Demo before a screen printing"
@@ -72,12 +67,12 @@
     },
     {
       "imgSrc": "./illust/pidge.jpg",
-      "gridSpan": 4,
+      "gridSpan": 6,
       "description": "Sticker design"
     },
     {
       "imgSrc": "./illust/pig.jpg",
-      "gridSpan": 4,
+      "gridSpan": 6,
       "description": "Greeting card design"
     }
   ]

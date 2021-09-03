@@ -69,6 +69,11 @@
       "imgSrc": "./sketch/tigers.jpg",
       "gridSpan": 4,
       "description": "Tigers in woods pattern"
+    },
+    {
+      "imgSrc": "./illust/bisli.jpg",
+      "gridSpan": 4,
+      "description": "Bisli"
     }
   ]
 }

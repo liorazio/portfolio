@@ -7,9 +7,6 @@
 <script>
 export default {
   name: "CenterGrid",
-  props: {
-
-  }
 }
 </script>
 
@@ -40,7 +37,4 @@ export default {
     justify-content: center;
   }
 }
-
-
-
 </style>
