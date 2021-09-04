@@ -16,9 +16,7 @@
 <script>
 import CenterGrid from "@/components/CenterGrid";
 import GalleryItem from "@/components/GalleryItem";
-
 // const axios = require('axios').default;
-
 
 export default {
   name: "Projects",
@@ -69,8 +67,16 @@ export default {
   object-position: center;
   text-align: left;
 }
-h3{
+
+h3 {
   width: 100%;
   max-width: 50vw;
+}
+
+@media only screen and (max-width: 768px) {
+  h3 {
+    width: 100%;
+    max-width: 90vw;
+  }
 }
 </style>
