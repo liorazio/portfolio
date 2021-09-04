@@ -46,7 +46,8 @@ export default {
     loadItemList: function () {
       const json = require.context("../assets/json", false, /.*\.json$/)
       const readobj = json(this.itemList);
-      this.items = readobj.items.filter(x => (!('enabled' in x)) || x.enabled);
+      this.items = readobj.items
+          // .filter(x => (!('enabled' in x)) || x.enabled);
       // this.projects = ('projects' in readobj) ? readobj.projects.filter(x => (!('enabled' in x)) || x.enabled) : null;
       this.videoSrc = readobj.videoSrc;
       this.videoDescription = readobj.videoDescription;
