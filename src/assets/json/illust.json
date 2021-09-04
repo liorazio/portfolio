@@ -98,12 +98,6 @@
       "description": "Illustration for a movie pitch"
     },
     {
-      "enabled": false,
-      "imgSrc": "./illust/bear.jpg",
-      "gridSpan": 4,
-      "description": "A monster from a child imagination, was featured in \"פרויקט מפלצתי 2019\""
-    },
-    {
       "imgSrc": "./illust/camel.jpg",
       "gridSpan": 4,
       "description": "A water color illustration for a children book"

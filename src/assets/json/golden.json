@@ -13,12 +13,6 @@
       "description": "Instead of one main character, every rule was supposed to be represented with a different person"
     },
     {
-      "enabled": false,
-      "imgSrc": "./golden/logo.jpg",
-      "gridSpan": 4,
-      "description": "The idea behind the design of the Aggle logo"
-    },
-    {
       "imgSrc": "./golden/monk.jpg",
       "gridSpan": 4,
       "description": "Very early concept work"
