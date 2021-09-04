@@ -10,8 +10,8 @@
                           @modal-overlay-click="showModal = false"/>
       </div>
       <figcaption>
-        <h2 v-if="caption">{{ caption }}</h2>
-        <h3>{{ description }}</h3>
+        <h3 v-if="caption">{{ caption }}</h3>
+        <p>{{ description }}</p>
       </figcaption>
     </figure>
   </CenterGridItem>
@@ -88,7 +88,9 @@ export default {
 figcaption {
   display: none;
 }
-
+p{
+  font-size: 20px;
+}
 .img-grid-x4-span {
   width: 16vw;
   height: 16vw

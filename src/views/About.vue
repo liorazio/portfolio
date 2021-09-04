@@ -66,6 +66,10 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+  .first-line{
+    text-align: left;
+    margin: 1em 8vw 0 8vw;
+  }
   p {
     margin: 1em 30px 0 30px;
     line-height: 1.5em;

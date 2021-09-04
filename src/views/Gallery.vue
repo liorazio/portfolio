@@ -4,11 +4,16 @@
     <iframe v-if="videoSrc" class="video" :src="this.videoSrc"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
     <div v-if="videoDescription" class="vid-desc">
-      <h3>{{ this.videoDescription }}</h3>
+      <p>{{ this.videoDescription }}</p>
     </div>
-    <CenterGrid>
+    <CenterGrid v-if="items">
       <GalleryItem v-for="item in items" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
                    :description="item.description" :key="itemList + '/' +item.imgSrc"/>
+    </CenterGrid>
+    <h2 v-if="projects">Related projects</h2>
+    <CenterGrid v-if="projects">
+      <Project v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :title="item.description"
+            :key="itemList + '/' +item.imgSrc"/>
     </CenterGrid>
   </div>
 </template>
@@ -16,11 +21,12 @@
 <script>
 import CenterGrid from "@/components/CenterGrid";
 import GalleryItem from "@/components/GalleryItem";
+import Project from "@/components/Project";
 // const axios = require('axios').default;
 
 export default {
   name: "Projects",
-  components: {GalleryItem, CenterGrid},
+  components: {GalleryItem, CenterGrid, Project},
   props: {
     itemList: {
       type: String,
@@ -38,7 +44,8 @@ export default {
     loadItemList: function () {
       const json = require.context("../assets/json", false, /.*\.json$/)
       const readobj = json(this.itemList);
-      this.items = readobj.items;
+      this.items = readobj.items.filter(x => (!('enabled' in x)) || x.enabled);
+      this.projects = ('projects' in readobj) ? readobj.projects.filter(x => (!('enabled' in x)) || x.enabled) : null;
       this.videoSrc = readobj.videoSrc;
       this.videoDescription = readobj.videoDescription;
     }
@@ -52,6 +59,7 @@ export default {
   data: function () {
     return {
       items: [],
+      projects: [],
       videoSrc: "",
       videoDescription: ""
     }
@@ -68,13 +76,21 @@ export default {
   text-align: left;
 }
 
+h1{
+  margin-bottom: 10px;
+}
 h3 {
+  margin-top: 10px;
+}
+
+p {
+  font-size: 20px;
   width: 100%;
   max-width: 50vw;
 }
 
 @media only screen and (max-width: 768px) {
-  h3 {
+  p {
     width: 100%;
     max-width: 90vw;
   }

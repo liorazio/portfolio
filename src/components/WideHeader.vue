@@ -16,7 +16,7 @@ export default {
 <style scoped>
 
 .wide-letter-heading {
-  letter-spacing: 1.5em;
+  letter-spacing: 0.1em;
   font-weight: bold;
 }
 

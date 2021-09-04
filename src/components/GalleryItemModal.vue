@@ -10,8 +10,8 @@
       </div>
       <img class="modal-img" :src="this.imgSrc" alt="bigger img">
       <div class="text-under-img">
-        <h2 v-if="this.caption">{{ this.caption }}</h2>
-        <h3>{{ this.description }}</h3>
+        <h3 v-if="this.caption">{{ this.caption }}</h3>
+        <p>{{ this.description }}</p>
       </div>
     </div>
   </transition>
@@ -41,6 +41,9 @@ export default {
 </script>
 
 <style scoped>
+p {
+  font-size: 20px;
+}
 .text-under-img {
   font-weight: lighter;
   margin-top: 10px;

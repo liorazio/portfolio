@@ -4,25 +4,32 @@
     <div class="canvas"><img alt="liorazio banner" src="../assets/banner.png"></div>
     <!--    <iframe src="https://www.youtube.com/embed/KoT_5IM2AKM"/>-->
 
-<!--    <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"-->
-<!--            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
-        <iframe class="video" src="https://www.youtube.com/embed/3cYSsiwgX-w?modestbranding=1&rel=0&disablekb=1"
+    <!--    <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"-->
+    <!--            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
+    <iframe class="video" src="https://www.youtube.com/embed/3cYSsiwgX-w?modestbranding=1&rel=0&disablekb=1"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
     <section>
       <div id="projects">
+        <WideHeader>Categories</WideHeader>
+        <CenterGrid>
+          <!--          <Project title="Character design" imgSrc="./cd/cdthumb.jpg"-->
+          <!--                   :routeTo="{name: 'cd'}"/>-->
+          <Project :grid-span="4" title="Illustrations & Concept" imgSrc="./illust/illustthumb.jpg"
+                   :routeTo="{name: 'illust'}"/>
+          <Project title="Gifs & Animation"  :grid-span="4" imgSrc="./gifs/runsmall.gif"
+                   :routeTo="{name: 'gifs'}"/>
+          <Project :grid-span="4" title="Sketch book" imgSrc="./sketch/sketchthumb.jpg"
+                   :routeTo="{name: 'sketch'}"/>
+        </CenterGrid>
+
         <WideHeader>Projects</WideHeader>
         <CenterGrid>
-          <Project title="Character design" imgSrc="./cd/cdthumb.jpg"
-                   :routeTo="{name: 'cd'}"/>
-          <Project title="Gifs" imgSrc="./gifs/dogosit.gif"
-                   :routeTo="{name: 'gifs'}"/>
           <Project title="Golden aggle" imgSrc="./golden/goldenthumb.jpg"
                    :routeTo="{name: 'golden'}"/>
-          <Project :grid-span="6" title="Illustrations" imgSrc="./illust/illustthumb.jpg"
-                   :routeTo="{name: 'illust'}"/>
-          <Project :grid-span="6" title="Sketch book" imgSrc="./sketch/sketchthumb.jpg"
-                   :routeTo="{name: 'sketch'}"/>
+          <Project title="DoGo Dash" imgSrc="./cd/Frontloading.jpg"
+                   :routeTo="{name: 'dogo'}"/>
+
         </CenterGrid>
       </div>
     </section>

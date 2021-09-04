@@ -51,6 +51,17 @@
       "description": "Early charecter design for Golden aggle"
     },
     {
+      "imgSrc": "./cd/dogpeople.jpg",
+      "gridSpan": 6,
+      "description": "Dog persons!"
+    },
+
+    {
+      "imgSrc": "./cd/rancher.jpg",
+      "gridSpan": 6,
+      "description": "Concept for a rancher girl."
+    },
+    {
       "imgSrc": "./sketch/girl1.jpg",
       "gridSpan": 6,
       "description": "was featured in כולעיצוב"

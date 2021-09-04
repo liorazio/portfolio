@@ -18,15 +18,15 @@ const routes = [
         component: About
     },
     {
-        path: '/character-design',
-        name: 'cd',
+        path: '/dogo-dash',
+        name: 'dogo',
         component: Gallery,
-        props: {itemList: './cd.json', heading: 'Character design'}
+        props: {itemList: './dogo.json', heading: 'DoGo Dash'}
     },{
         path: '/gifs',
         name: 'gifs',
         component: Gallery,
-        props: {itemList: './gifs.json', heading: 'Gifs'}
+        props: {itemList: './gifs.json', heading: 'Gifs & Animation'}
     },{
         path: '/golden-aggle',
         name: 'golden',
@@ -36,7 +36,7 @@ const routes = [
         path: '/illustrations',
         name: 'illust',
         component: Gallery,
-        props: {itemList: './illust.json', heading: 'Illustrations'}
+        props: {itemList: './illust.json', heading: 'Illustrations & Concept'}
     },{
         path: '/sketch-book',
         name: 'sketch',

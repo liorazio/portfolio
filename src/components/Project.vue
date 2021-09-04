@@ -8,7 +8,7 @@
             :src="pictureStatic" alt="img stab"/>
       </router-link>
       <figcaption>
-        <h2>{{ title }}</h2>
+        <p>{{ title }}</p>
       </figcaption>
       <span :id="spanId">
        <h2>{{ title }}</h2>
@@ -150,6 +150,9 @@ img:hover {
     /*height: 64.5vw*/
   }
 
+  p {
+    font-size: 20px;
+  }
 
   span {
     display: none;

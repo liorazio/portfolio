@@ -1,4 +1,21 @@
 {
+  "projects": [
+    {
+      "imgSrc": "./golden/poster.jpg",
+      "routeTo": {
+        "name": "golden"
+      },
+      "gridSpan": 4,
+      "description": "The final poster"
+    } ,  {
+      "imgSrc": "./cd/Frontloading.jpg",
+      "routeTo": {
+        "name": "dogo"
+      },
+      "gridSpan": 4,
+      "description": "Dogo Dash"
+    }
+  ],
   "items": [
     {
       "imgSrc": "./illust/dogskate.jpg",
@@ -6,9 +23,9 @@
       "description": "Skating shiba"
     },
     {
-      "imgSrc": "./illust/dragon.jpg",
+      "imgSrc": "./cd/beachrun.jpg",
       "gridSpan": 6,
-      "description": "Dragon dear"
+      "description": "Styled dog"
     },
     {
       "imgSrc": "./illust/bubbles.jpg",
@@ -36,6 +53,41 @@
       "description": "Salmon dish"
     },
     {
+      "imgSrc": "./cd/Dino.jpg",
+      "gridSpan": 4,
+      "description": "Concept monster for a game. You can see the animated version in Gifs folder "
+    },
+    {
+      "imgSrc": "./cd/deer.jpg",
+      "gridSpan": 4,
+      "description": "Concept monster for a game. The file is ready for animation"
+    },
+    {
+      "imgSrc": "./cd/tigersharker.jpg",
+      "gridSpan": 4,
+      "description": "Redrawing of a character I made up at age 15"
+    },
+    {
+      "imgSrc": "./cd/dogcool.jpg",
+      "gridSpan": 6,
+      "description": "Styled dog"
+    },
+    {
+      "imgSrc": "./illust/dragon.jpg",
+      "gridSpan": 6,
+      "description": "Dragon dear"
+    },
+    {
+      "imgSrc": "./cd/pandalady.jpg",
+      "gridSpan": 4,
+      "description": "Redrawing of a character I made up at age 15"
+    },
+    {
+      "imgSrc": "./cd/aliandude.jpg",
+      "gridSpan": 4,
+      "description": "From the imagination of a child, was featured in \"פרויקט מפלצתי 2020\""
+    },
+    {
       "imgSrc": "./illust/eat.jpg",
       "gridSpan": 4,
       "description": "Demo before a screen printing"
@@ -46,6 +98,7 @@
       "description": "Illustration for a movie pitch"
     },
     {
+      "enabled": false,
       "imgSrc": "./illust/bear.jpg",
       "gridSpan": 4,
       "description": "A monster from a child imagination, was featured in \"פרויקט מפלצתי 2019\""
@@ -67,12 +120,12 @@
     },
     {
       "imgSrc": "./illust/pidge.jpg",
-      "gridSpan": 6,
+      "gridSpan": 4,
       "description": "Sticker design"
     },
     {
       "imgSrc": "./illust/pig.jpg",
-      "gridSpan": 6,
+      "gridSpan": 4,
       "description": "Greeting card design"
     }
   ]

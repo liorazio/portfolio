@@ -1,4 +1,21 @@
 {
+  "projects": [
+    {
+      "imgSrc": "./golden/goldenthumb.gif",
+      "routeTo": {
+        "name": "golden"
+      },
+      "gridSpan": 4,
+      "description": "The final poster"
+    } ,  {
+      "imgSrc": "./gifs/dogosit.gif",
+      "routeTo": {
+        "name": "dogo"
+      },
+      "gridSpan": 4,
+      "description": "Dogo Dash"
+    }
+  ],
   "items": [
     {
       "imgSrc": "./gifs/runsmall.gif",
@@ -14,20 +31,14 @@
       "imgSrc": "./gifs/dog1.gif",
       "gridSpan": 4,
       "description": "Panting corgi"
-    },
-    {
-      "imgSrc": "./gifs/dogosit.gif",
+    },{
+      "imgSrc": "./gifs/fish1.gif",
       "gridSpan": 4,
-      "description": "Panting dog for a game concept"
-    },
-    {
-      "imgSrc": "./gifs/dogorun.gif",
-      "gridSpan": 4,
-      "description": "Running dog for a game concept"
+      "description": "Small animation loop, part of a movie about india"
     },
     {
       "imgSrc": "./gifs/dogjump2.gif",
-      "gridSpan": 6,
+      "gridSpan": 4,
       "description": "Jumping dog loop "
     },
     {
@@ -35,11 +46,7 @@
       "gridSpan": 6,
       "description": "Animation loop for Abook, a book about being a first time father"
     },
-    {
-      "imgSrc": "./gifs/fish1.gif",
-      "gridSpan": 6,
-      "description": "Small animation loop, part of a movie about india"
-    },
+
     {
       "imgSrc": "./gifs/belly_yel.gif",
       "gridSpan": 6,

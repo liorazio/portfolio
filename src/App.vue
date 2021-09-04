@@ -17,22 +17,30 @@
             Galleries
             <ul class="menu-level">
               <li class="empty-menu-line">
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+              </li>
+              <li class="empty-menu-line">
+                Categories
               </li>
               <li>
-                <router-link :to="{name:'cd'}">Character design</router-link>
-              </li>
-              <li>
-                <router-link :to="{name:'gifs'}">Gifs &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</router-link>
-              </li>
-              <li>
-                <router-link :to="{name:'golden'}">Golden aggle</router-link>
+                <router-link :to="{name:'gifs'}">Gifs & Animation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                </router-link>
               </li>
               <li>
                 <router-link :to="{name:'illust'}">Illustrations</router-link>
               </li>
               <li>
-                <router-link :to="{name:'sketch'}">Sketch book</router-link>
+                <router-link :to="{name:'sketch'}">Sketch book &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                </router-link>
+              </li>
+              <li class="empty-menu-line">
+                Projects&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+              </li>
+              <li>
+                <router-link :to="{name:'dogo'}">DoGo dash&nbsp;&nbsp;</router-link>
+              </li>
+              <li>
+                <router-link :to="{name:'golden'}">Golden aggle</router-link>
               </li>
             </ul>
           </li>
@@ -42,11 +50,26 @@
   </div>
   <router-view class="router-view"/>
   <footer>
-    <h4 class="first-line">
+    <div>
+      <router-link to="/">Home</router-link>
+      |
+      <router-link to="/about">About</router-link>
+      |
+      <router-link :to="{name:'gifs'}">Gifs & Animation</router-link>
+      |
+      <router-link :to="{name:'illust'}">Illustrations</router-link>
+      |
+      <router-link :to="{name:'sketch'}">Sketch book</router-link>
+      |
+      <router-link :to="{name:'dogo'}">DoGo dash</router-link>
+      |
+      <router-link :to="{name:'golden'}">Golden aggle</router-link>
+    </div>
+    <div>
       <a href="https://www.facebook.com/Liorazioo" target="_blank"><i class="social fab fa-facebook-square"></i></a>
       &nbsp;&nbsp;
       <a href="https://instagram.com/liorazio" target="_blank"><i class="social fab fa-instagram-square"></i></a>
-    </h4>
+    </div>
     <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
   </footer>
 </template>
@@ -102,6 +125,10 @@ export default {
 
 .galleries {
   margin-right: 4rem;
+}
+
+.empty-menu-line {
+  color: gray;
 }
 
 .empty-menu-line:hover {
@@ -177,7 +204,8 @@ nav {
 }
 
 nav div {
-  margin: 1em;
+  margin: 1em 3em 1em 3em;
+
   background-color: transparent;
   width: auto;
 }
@@ -192,7 +220,28 @@ nav a.router-link-exact-active {
   color: #2e8bff;
 }
 
+footer div{
+  margin-top: 20px;
+}
+
+footer a {
+  color: gray;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a.router-link-exact-active {
+  color: #2e8bff;
+}
+
 @media only screen and (max-width: 768px) {
+
+  nav div {
+    margin: 1em;
+
+    background-color: transparent;
+    width: auto;
+  }
 
   #nav-canvas {
     height: 74px;
