@@ -238,9 +238,12 @@ footer a.router-link-exact-active {
 
 @media only screen and (max-width: 768px) {
 
+  li{
+    padding: 0.6em;
+  }
+
   nav div {
     margin: 1em;
-
     background-color: transparent;
     width: auto;
   }
