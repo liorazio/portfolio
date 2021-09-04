@@ -27,7 +27,7 @@
                 </router-link>
               </li>
               <li>
-                <router-link :to="{name:'illust'}">Ill. & Concept</router-link>
+                <router-link :to="{name:'illust'}">Illustrations</router-link>
               </li>
               <li>
                 <router-link :to="{name:'sketch'}">Sketch book &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;

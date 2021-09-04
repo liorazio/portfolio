@@ -7,7 +7,8 @@
       },
       "gridSpan": 4,
       "description": "The final poster"
-    } ,  {
+    },
+    {
       "imgSrc": "./cd/Frontloading.jpg",
       "routeTo": {
         "name": "dogo"
@@ -28,6 +29,31 @@
       "description": "Styled dog"
     },
     {
+      "imgSrc": "./cd/Dino.jpg",
+      "gridSpan": 4,
+      "description": "Concept monster for a game. You can see the animated version in Gifs folder "
+    },
+    {
+      "imgSrc": "./cd/deer.jpg",
+      "gridSpan": 4,
+      "description": "Concept monster for a game. The file is ready for animation"
+    },
+    {
+      "imgSrc": "./cd/tigersharker.jpg",
+      "gridSpan": 4,
+      "description": "Redrawing of a character I made up when I was younger"
+    },
+    {
+      "imgSrc": "./illust/karovka.jpg",
+      "gridSpan": 6,
+      "description": "Russian snack"
+    },
+    {
+      "imgSrc": "./illust/salmon.jpg",
+      "gridSpan": 6,
+      "description": "Salmon dish"
+    },
+    {
       "imgSrc": "./illust/bubbles.jpg",
       "gridSpan": 4,
       "description": "Illustration for Perrier"
@@ -43,31 +69,6 @@
       "description": "Cockatiel enjoying the sun"
     },
     {
-      "imgSrc": "./illust/karovka.jpg",
-      "gridSpan": 6,
-      "description": "Russian snack"
-    },
-    {
-      "imgSrc": "./illust/salmon.jpg",
-      "gridSpan": 6,
-      "description": "Salmon dish"
-    },
-    {
-      "imgSrc": "./cd/Dino.jpg",
-      "gridSpan": 4,
-      "description": "Concept monster for a game. You can see the animated version in Gifs folder "
-    },
-    {
-      "imgSrc": "./cd/deer.jpg",
-      "gridSpan": 4,
-      "description": "Concept monster for a game. The file is ready for animation"
-    },
-    {
-      "imgSrc": "./cd/tigersharker.jpg",
-      "gridSpan": 4,
-      "description": "Redrawing of a character I made up at age 15"
-    },
-    {
       "imgSrc": "./cd/dogcool.jpg",
       "gridSpan": 6,
       "description": "Styled dog"
@@ -80,7 +81,7 @@
     {
       "imgSrc": "./cd/pandalady.jpg",
       "gridSpan": 4,
-      "description": "Redrawing of a character I made up at age 15"
+      "description": "Redrawing of a character I made up when I was younger"
     },
     {
       "imgSrc": "./cd/aliandude.jpg",
