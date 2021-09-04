@@ -20,10 +20,4 @@ export default {
   font-weight: bold;
 }
 
-@media only screen and (max-width: 768px) {
-  .wide-letter-heading {
-    letter-spacing: 6vw;
-    font-weight: bold;
-  }
-}
 </style>
