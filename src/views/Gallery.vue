@@ -10,16 +10,16 @@
       <GalleryItem v-for="item in items" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
                    :description="item.description" :key="'galleryItem/' + itemList + '/' +item.imgSrc"/>
     </CenterGrid>
-<!--    <h2 v-if="projects">Related projects</h2>-->
-<!--    <CenterGrid v-if="projects">-->
-<!--      <Project v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan"-->
-<!--               :title="item.description" :key="'project/' + itemList + '/' +item.imgSrc"/>-->
-<!--    </CenterGrid>-->
+    <h2 v-if="projects">Related projects</h2>
+    <CenterGrid v-if="projects">
+      <Project v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan"
+               :title="item.description" :key="'project/' + itemList + '/' +item.imgSrc"/>
+    </CenterGrid>
   </div>
 </template>
 
 <script>
-// import Project from "@/components/Project";
+import Project from "@/components/Project";
 import CenterGrid from "@/components/CenterGrid";
 import GalleryItem from "@/components/GalleryItem";
 // const axios = require('axios').default;
@@ -27,8 +27,9 @@ import GalleryItem from "@/components/GalleryItem";
 export default {
   name: "Projects",
   components: {
-    // Project,
-    GalleryItem, CenterGrid},
+    Project,
+    GalleryItem, CenterGrid
+  },
   props: {
     itemList: {
       type: String,
@@ -47,8 +48,10 @@ export default {
       const json = require.context("../assets/json", false, /.*\.json$/)
       const readobj = json(this.itemList);
       this.items = readobj.items
-          // .filter(x => (!('enabled' in x)) || x.enabled);
-      // this.projects = ('projects' in readobj) ? readobj.projects.filter(x => (!('enabled' in x)) || x.enabled) : null;
+      // .filter(x => (!('enabled' in x)) || x.enabled);
+      this.projects = ('projects' in readobj) ? readobj.projects
+          // .filter(x => (!('enabled' in x)) || x.enabled)
+          : null;
       this.videoSrc = readobj.videoSrc;
       this.videoDescription = readobj.videoDescription;
     }
