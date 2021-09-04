@@ -27,7 +27,7 @@
                 </router-link>
               </li>
               <li>
-                <router-link :to="{name:'illust'}">Illustrations</router-link>
+                <router-link :to="{name:'illust'}">Ill. & Concept</router-link>
               </li>
               <li>
                 <router-link :to="{name:'sketch'}">Sketch book &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
@@ -48,7 +48,9 @@
       </div>
     </nav>
   </div>
-  <router-view class="router-view"/>
+  <main>
+    <router-view class="router-view"/>
+  </main>
   <footer>
     <div>
       <router-link to="/">Home</router-link>
@@ -57,7 +59,7 @@
       |
       <router-link :to="{name:'gifs'}">Gifs & Animation</router-link>
       |
-      <router-link :to="{name:'illust'}">Illustrations</router-link>
+      <router-link :to="{name:'illust'}">Illustrations & Concept</router-link>
       |
       <router-link :to="{name:'sketch'}">Sketch book</router-link>
       |
@@ -220,7 +222,7 @@ nav a.router-link-exact-active {
   color: #2e8bff;
 }
 
-footer div{
+footer div {
   margin-top: 20px;
 }
 
