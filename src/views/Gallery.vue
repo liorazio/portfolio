@@ -8,25 +8,25 @@
     </div>
     <CenterGrid v-if="items">
       <GalleryItem v-for="item in items" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
-                   :description="item.description" :key="itemList + '/' +item.imgSrc"/>
+                   :description="item.description" :key="'galleryItem/' + itemList + '/' +item.imgSrc"/>
     </CenterGrid>
     <h2 v-if="projects">Related projects</h2>
     <CenterGrid v-if="projects">
-      <Project v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :title="item.description"
-            :key="itemList + '/' +item.imgSrc"/>
+      <Project v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan"
+               :title="item.description" :key="'project/' + itemList + '/' +item.imgSrc"/>
     </CenterGrid>
   </div>
 </template>
 
 <script>
+import Project from "@/components/Project";
 import CenterGrid from "@/components/CenterGrid";
 import GalleryItem from "@/components/GalleryItem";
-import Project from "@/components/Project";
 // const axios = require('axios').default;
 
 export default {
   name: "Projects",
-  components: {GalleryItem, CenterGrid, Project},
+  components: {Project, GalleryItem, CenterGrid},
   props: {
     itemList: {
       type: String,
@@ -76,9 +76,10 @@ export default {
   text-align: left;
 }
 
-h1{
+h1 {
   margin-bottom: 10px;
 }
+
 h3 {
   margin-top: 10px;
 }
