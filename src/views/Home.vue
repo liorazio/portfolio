@@ -6,7 +6,7 @@
 
     <!--    <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"-->
     <!--            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
-    <iframe class="video" src="https://www.youtube.com/embed/3cYSsiwgX-w?modestbranding=1&rel=0&disablekb=1"
+    <iframe class="video" src="https://www.youtube.com/embed/SDJmEvOiVkc?modestbranding=1&rel=0&disablekb=1"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
     <section>
@@ -67,7 +67,7 @@ export default {
   border-bottom-right-radius: 225px 15px;
   border-bottom-left-radius: 15px 255px;
   width: 45%;
-  height: 25vw;
+  height: 25.3vw;
 }
 
 .canvas img {
@@ -89,7 +89,7 @@ export default {
 
   .video {
     width: 90%;
-    height: 52vw;
+    height: 50.6vw;
 
   }
 }

@@ -1,12 +1,12 @@
 {
   "projects": [
     {
-      "imgSrc": "./golden/poster.jpg",
+      "imgSrc": "./golden/goldenthumb.jpg",
       "routeTo": {
         "name": "golden"
       },
       "gridSpan": 4,
-      "description": "The final poster"
+      "description": "Golden aggle"
     },
     {
       "imgSrc": "./cd/Frontloading.jpg",
