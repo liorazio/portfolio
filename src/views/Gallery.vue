@@ -7,28 +7,40 @@
       <p>{{ this.videoDescription }}</p>
     </div>
     <CenterGrid v-if="items">
-      <GalleryItem v-for="item in items" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
-                   :description="item.description" :key="'galleryItem/' + itemList + '/' +item.imgSrc"/>
+      <AsyncGalleryItem v-for="item in items" :key="'galleryItem/' + itemList + '/' +item.imgSrc"
+                        :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
+                        :description="item.description"/>
     </CenterGrid>
     <h2 v-if="projects">Related projects</h2>
     <CenterGrid v-if="projects">
-      <Project v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan"
-               :title="item.description" :key="'project/' + itemList + '/' +item.imgSrc"/>
+      <AsyncProject v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc" :gridSpan="item.gridSpan"
+                    :title="item.description" :key="'project/' + itemList + '/' +item.imgSrc"/>
     </CenterGrid>
   </div>
 </template>
 
 <script>
-import Project from "@/components/Project";
+import {defineAsyncComponent} from "vue";
 import CenterGrid from "@/components/CenterGrid";
-import GalleryItem from "@/components/GalleryItem";
-// const axios = require('axios').default;
+import CenterGridItem from "@/components/CenterGridItem";
+
+const AsyncGalleryItem = defineAsyncComponent({
+  name: 'AsyncGalleryItem',
+  loader: () => import(/* webpackChunkName: 'galleryItem' */ '@/components/GalleryItem'),
+  loadingComponent: CenterGridItem,
+})
+const AsyncProject = defineAsyncComponent({
+  name: 'AsyncGalleryItem',
+  loader: () => import(/* webpackChunkName: 'project' */ '@/components/Project'),
+  loadingComponent: CenterGridItem,
+})
 
 export default {
   name: "Projects",
   components: {
-    Project,
-    GalleryItem, CenterGrid
+    AsyncGalleryItem,
+    AsyncProject,
+    CenterGrid
   },
   props: {
     itemList: {

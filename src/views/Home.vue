@@ -15,19 +15,19 @@
         <CenterGrid>
           <!--          <Project title="Character design" imgSrc="./cd/cdthumb.jpg"-->
           <!--                   :routeTo="{name: 'cd'}"/>-->
-          <Project :grid-span="4" title="Illustrations & Concept" imgSrc="./illust/illustthumb.jpg"
+          <AsyncProject :grid-span="4" title="Illustrations & Concept" imgSrc="./illust/illustthumb.jpg"
                    :routeTo="{name: 'illust'}"/>
-          <Project title="Gifs & Animation"  :grid-span="4" imgSrc="./gifs/runsmall.gif"
+          <AsyncProject title="Gifs & Animation"  :grid-span="4" imgSrc="./gifs/runsmall.gif"
                    :routeTo="{name: 'gifs'}"/>
-          <Project :grid-span="4" title="Sketch book" imgSrc="./sketch/sketchthumb.jpg"
+          <AsyncProject :grid-span="4" title="Sketch book" imgSrc="./sketch/sketchthumb.jpg"
                    :routeTo="{name: 'sketch'}"/>
         </CenterGrid>
 
         <WideHeader>Projects</WideHeader>
         <CenterGrid>
-          <Project title="Golden aggle" imgSrc="./golden/goldenthumb.jpg"
+          <AsyncProject title="Golden aggle" imgSrc="./golden/goldenthumb.jpg"
                    :routeTo="{name: 'golden'}"/>
-          <Project title="DoGo Dash" imgSrc="./cd/Frontloading.jpg"
+          <AsyncProject title="DoGo Dash" imgSrc="./cd/Frontloading.jpg"
                    :routeTo="{name: 'dogo'}"/>
 
         </CenterGrid>
@@ -39,15 +39,25 @@
 
 <script>
 // @ is an alias to /src
+import {defineAsyncComponent} from "vue";
 
-import Project from "@/components/Project";
+// import Project from "@/components/Project";
 import WideHeader from "@/components/WideHeader";
 import CenterGrid from "@/components/CenterGrid";
+import CenterGridItem from "@/components/CenterGridItem";
+
+// Async component with options
+const AsyncProject = defineAsyncComponent({
+  name: 'AsyncGalleryItem',
+  loader: () => import(/* webpackChunkName: 'project' */ '@/components/Project'),
+  loadingComponent: CenterGridItem,
+})
+
 
 export default {
   name: 'Home',
   components: {
-    Project, WideHeader, CenterGrid
+    AsyncProject, WideHeader, CenterGrid
   }
 
 }
