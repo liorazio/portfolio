@@ -6,7 +6,9 @@
 
     <!--    <iframe class="video" src="https://player.vimeo.com/video/444298599?h=30668b83f1"-->
     <!--            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
-    <iframe class="video" src="https://www.youtube.com/embed/3cYSsiwgX-w?modestbranding=1&rel=0&disablekb=1"
+    <!--    <iframe class="video" src="https://www.youtube.com/embed/3cYSsiwgX-w?modestbranding=1&rel=0&disablekb=1"-->
+    <!--            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>-->
+    <iframe class="video" src="https://www.youtube.com/embed/SDJmEvOiVkc?modestbranding=1&rel=0&disablekb=1"
             allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
     <section>
@@ -16,19 +18,19 @@
           <!--          <Project title="Character design" imgSrc="./cd/cdthumb.jpg"-->
           <!--                   :routeTo="{name: 'cd'}"/>-->
           <AsyncProject :grid-span="4" title="Illustrations & Concept" imgSrc="./illust/illustthumb.jpg"
-                   :routeTo="{name: 'illust'}"/>
-          <AsyncProject title="Gifs & Animation"  :grid-span="4" imgSrc="./gifs/runsmall.gif"
-                   :routeTo="{name: 'gifs'}"/>
+                        :routeTo="{name: 'illust'}"/>
+          <AsyncProject title="Gifs & Animation" :grid-span="4" imgSrc="./gifs/runsmall.gif"
+                        :routeTo="{name: 'gifs'}"/>
           <AsyncProject :grid-span="4" title="Sketch book" imgSrc="./sketch/sketchthumb.jpg"
-                   :routeTo="{name: 'sketch'}"/>
+                        :routeTo="{name: 'sketch'}"/>
         </CenterGrid>
 
         <WideHeader>Projects</WideHeader>
         <CenterGrid>
           <AsyncProject title="Golden aggle" imgSrc="./golden/goldenthumb.jpg"
-                   :routeTo="{name: 'golden'}"/>
+                        :routeTo="{name: 'golden'}"/>
           <AsyncProject title="DoGo Dash" imgSrc="./cd/Frontloading.jpg"
-                   :routeTo="{name: 'dogo'}"/>
+                        :routeTo="{name: 'dogo'}"/>
 
         </CenterGrid>
       </div>
