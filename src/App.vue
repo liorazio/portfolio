@@ -1,6 +1,6 @@
 <template>
   <div id="nav-canvas">
-    <img id="nav-img" :src="barImgSrc" alt="bar">
+    <img id="nav-img" src="@/assets/bar.svg" alt="bar">
     <nav>
       <div>
         <router-link to="/">Lior Raz</router-link>
@@ -82,7 +82,6 @@ export default {
   name: "App",
   data: function () {
     return {
-      barImgSrc: require("@/assets/bar.svg"),
       windowInnerWidthBig: true
     }
   },

@@ -1,88 +1,88 @@
 {
   "items": [
     {
-      "imgSrc": "./sketch/bunnies.jpg",
+      "imgSrc": "sketch/bunnies.jpg",
       "gridSpan": 6,
       "description": "Sketchs for a book"
     },
     {
-      "imgSrc": "./sketch/bunns.jpg",
+      "imgSrc": "sketch/bunns.jpg",
       "gridSpan": 6,
       "description": "Zombie bunnies for a card game"
     },
     {
-      "imgSrc": "./sketch/colors.jpg",
+      "imgSrc": "sketch/colors.jpg",
       "gridSpan": 4,
       "description": "Quick interpretation of shapes"
     },
     {
-      "imgSrc": "./sketch/cat_lady.jpg",
+      "imgSrc": "sketch/cat_lady.jpg",
       "gridSpan": 4,
       "description": "Cats are known to love strings"
     },
     {
-      "imgSrc": "./sketch/cats.jpg",
+      "imgSrc": "sketch/cats.jpg",
       "gridSpan": 4,
       "description": "More shape interpretation"
     },
     {
-      "imgSrc": "./sketch/comics1.jpg",
+      "imgSrc": "sketch/comics1.jpg",
       "gridSpan": 6,
       "description": "a short comics, is featured in the book \"A7 המהפכה\""
     },
     {
-      "imgSrc": "./sketch/comic.jpg",
+      "imgSrc": "sketch/comic.jpg",
       "gridSpan": 6,
       "description": "After living with a cat for some time"
     },
     {
-      "imgSrc": "./sketch/horse.jpg",
+      "imgSrc": "sketch/horse.jpg",
       "gridSpan": 4,
       "description": "A pony for a children book "
     },
     {
-      "imgSrc": "./sketch/cows.jpg",
+      "imgSrc": "sketch/cows.jpg",
       "gridSpan": 4,
       "description": "Concept sketches for Golden aggle"
     },
     {
-      "imgSrc": "./sketch/lady.jpg",
+      "imgSrc": "sketch/lady.jpg",
       "gridSpan": 4,
       "description": "Early charecter design for Golden aggle"
     },
     {
-      "imgSrc": "./cd/dogpeople.jpg",
+      "imgSrc": "cd/dogpeople.jpg",
       "gridSpan": 6,
       "description": "Dog persons!"
     },
 
     {
-      "imgSrc": "./cd/rancher.jpg",
+      "imgSrc": "cd/rancher.jpg",
       "gridSpan": 6,
       "description": "Concept for a rancher girl."
     },
     {
-      "imgSrc": "./sketch/girl1.jpg",
+      "imgSrc": "sketch/girl1.jpg",
       "gridSpan": 6,
       "description": "was featured in כולעיצוב"
     },
     {
-      "imgSrc": "./sketch/girl2.jpg",
+      "imgSrc": "sketch/girl2.jpg",
       "gridSpan": 6,
       "description": "another sketch with the same girl"
     },
     {
-      "imgSrc": "./sketch/pink.jpg",
+      "imgSrc": "sketch/pink.jpg",
       "gridSpan": 4,
       "description": "Early character design for Golden aggle"
     },
     {
-      "imgSrc": "./sketch/tigers.jpg",
+      "imgSrc": "sketch/tigers.jpg",
       "gridSpan": 4,
       "description": "Tigers in woods pattern"
     },
     {
-      "imgSrc": "./illust/bisli.jpg",
+      "imgSrc": "illust/bisli.jpg",
       "gridSpan": 4,
       "description": "Bisli"
     }

@@ -19,7 +19,7 @@
 
 <script>
 import {uuid} from 'vue-uuid';
-import CenterGridItem from "@/components/CenterGridItem";
+import CenterGridItem from "@/components/CenterGridItem.vue";
 
 export default {
   name: "Project",
@@ -76,12 +76,11 @@ export default {
     window.removeEventListener('resize', this.onResize)
   },
   data: function () {
-    const images = require.context('../assets/', true, /.*\.(gif|png|jpe?g|svg)$/)
 
     return {
       hover: false,
       gridSpanCalc: this.gridSpan,
-      pictureStatic: images(this.imgSrc),
+      pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
     }
   },
   computed: {

@@ -1,14 +1,14 @@
 {
   "projects": [
     {
-      "imgSrc": "./golden/goldenthumb.gif",
+      "imgSrc": "golden/goldenthumb.gif",
       "routeTo": {
         "name": "golden"
       },
       "gridSpan": 4,
       "description": "The final poster"
     } ,  {
-      "imgSrc": "./gifs/dogosit.gif",
+      "imgSrc": "gifs/dogosit.gif",
       "routeTo": {
         "name": "dogo"
       },
@@ -18,37 +18,37 @@
   ],
   "items": [
     {
-      "imgSrc": "./gifs/runsmall.gif",
+      "imgSrc": "gifs/runsmall.gif",
       "gridSpan": 6,
       "description": "Running squirrel classic animation"
     },
     {
-      "imgSrc": "./gifs/dinoshok.gif",
+      "imgSrc": "gifs/dinoshok.gif",
       "gridSpan": 6,
       "description": "Game style creature animation. Illustration and concept by me."
     },
     {
-      "imgSrc": "./gifs/dog1.gif",
+      "imgSrc": "gifs/dog1.gif",
       "gridSpan": 4,
       "description": "Panting corgi"
     },{
-      "imgSrc": "./gifs/fish1.gif",
+      "imgSrc": "gifs/fish1.gif",
       "gridSpan": 4,
       "description": "Small animation loop, part of a movie about india"
     },
     {
-      "imgSrc": "./gifs/dogjump2.gif",
+      "imgSrc": "gifs/dogjump2.gif",
       "gridSpan": 4,
       "description": "Jumping dog loop "
     },
     {
-      "imgSrc": "./gifs/sleep.gif",
+      "imgSrc": "gifs/sleep.gif",
       "gridSpan": 6,
       "description": "Animation loop for Abook, a book about being a first time father"
     },
 
     {
-      "imgSrc": "./gifs/belly_yel.gif",
+      "imgSrc": "gifs/belly_yel.gif",
       "gridSpan": 6,
       "description": "Animation loop for Abook, a book about being a first time father"
     }

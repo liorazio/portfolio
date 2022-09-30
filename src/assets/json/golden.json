@@ -3,27 +3,27 @@
   "videoDescription": "The golden calf was a symbol for what the ancient tribe that stood before mount. Sinai decided was godly by their standard - gold, abundance and a physical closeness to a god. Today we still have golden calf but they are no longer in a shape of a statue. We make them by today's standard.",
   "items": [
     {
-      "imgSrc": "./golden/poster.jpg",
+      "imgSrc": "golden/poster.jpg",
       "gridSpan": 6,
       "description": "The final poster"
     },
     {
-      "imgSrc": "./golden/char.jpg",
+      "imgSrc": "golden/char.jpg",
       "gridSpan": 6,
       "description": "Instead of one main character, every rule was supposed to be represented with a different person"
     },
     {
-      "imgSrc": "./golden/monk.jpg",
+      "imgSrc": "golden/monk.jpg",
       "gridSpan": 4,
       "description": "Very early concept work"
     },
     {
-      "imgSrc": "./golden/artwork.jpg",
+      "imgSrc": "golden/artwork.jpg",
       "gridSpan": 4,
       "description": "Early concept. At that stage the movie was named \"holy cows\""
     },
     {
-      "imgSrc": "./golden/shadow.jpg",
+      "imgSrc": "golden/shadow.jpg",
       "gridSpan": 4,
       "description": "Early concept. At that stage the movie was named \"holy cows\""
     }

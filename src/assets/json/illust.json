@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "imgSrc": "./golden/poster.jpg",
+      "imgSrc": "golden/poster.jpg",
       "routeTo": {
         "name": "golden"
       },
@@ -9,7 +9,7 @@
       "description": "The final poster"
     },
     {
-      "imgSrc": "./cd/Frontloading.jpg",
+      "imgSrc": "cd/Frontloading.jpg",
       "routeTo": {
         "name": "dogo"
       },
@@ -19,107 +19,107 @@
   ],
   "items": [
     {
-      "imgSrc": "./illust/dogskate.jpg",
+      "imgSrc": "illust/dogskate.jpg",
       "gridSpan": 6,
       "description": "Skating shiba"
     },
     {
-      "imgSrc": "./cd/beachrun.jpg",
+      "imgSrc": "cd/beachrun.jpg",
       "gridSpan": 6,
       "description": "Styled dog"
     },
     {
-      "imgSrc": "./cd/Dino.jpg",
+      "imgSrc": "cd/Dino.jpg",
       "gridSpan": 4,
       "description": "Concept monster for a game. You can see the animated version in Gifs folder "
     },
     {
-      "imgSrc": "./cd/deer.jpg",
+      "imgSrc": "cd/deer.jpg",
       "gridSpan": 4,
       "description": "Concept monster for a game. The file is ready for animation"
     },
     {
-      "imgSrc": "./cd/tigersharker.jpg",
+      "imgSrc": "cd/tigersharker.jpg",
       "gridSpan": 4,
       "description": "Redrawing of a character I made up when I was younger"
     },
     {
-      "imgSrc": "./illust/karovka.jpg",
+      "imgSrc": "illust/karovka.jpg",
       "gridSpan": 6,
       "description": "Russian snack"
     },
     {
-      "imgSrc": "./illust/salmon.jpg",
+      "imgSrc": "illust/salmon.jpg",
       "gridSpan": 6,
       "description": "Salmon dish"
     },
     {
-      "imgSrc": "./illust/bubbles.jpg",
+      "imgSrc": "illust/bubbles.jpg",
       "gridSpan": 4,
       "description": "Illustration for Perrier"
     },
     {
-      "imgSrc": "./illust/Original_Tortellini.jpg",
+      "imgSrc": "illust/Original_Tortellini.jpg",
       "gridSpan": 4,
       "description": "Tortellini"
     },
     {
-      "imgSrc": "./illust/parrot.jpg",
+      "imgSrc": "illust/parrot.jpg",
       "gridSpan": 4,
       "description": "Cockatiel enjoying the sun"
     },
     {
-      "imgSrc": "./cd/dogcool.jpg",
+      "imgSrc": "cd/dogcool.jpg",
       "gridSpan": 6,
       "description": "Styled dog"
     },
     {
-      "imgSrc": "./illust/dragon.jpg",
+      "imgSrc": "illust/dragon.jpg",
       "gridSpan": 6,
       "description": "Dragon dear"
     },
     {
-      "imgSrc": "./cd/pandalady.jpg",
+      "imgSrc": "cd/pandalady.jpg",
       "gridSpan": 4,
       "description": "Redrawing of a character I made up when I was younger"
     },
     {
-      "imgSrc": "./cd/aliandude.jpg",
+      "imgSrc": "cd/aliandude.jpg",
       "gridSpan": 4,
       "description": "From the imagination of a child, was featured in \"פרויקט מפלצתי 2020\""
     },
     {
-      "imgSrc": "./illust/eat.jpg",
+      "imgSrc": "illust/eat.jpg",
       "gridSpan": 4,
       "description": "Demo before a screen printing"
     },
     {
-      "imgSrc": "./illust/poster.jpg",
+      "imgSrc": "illust/poster.jpg",
       "gridSpan": 4,
       "description": "Illustration for a movie pitch"
     },
     {
-      "imgSrc": "./illust/camel.jpg",
+      "imgSrc": "illust/camel.jpg",
       "gridSpan": 4,
       "description": "A water color illustration for a children book"
     },
     {
-      "imgSrc": "./illust/black.jpg",
+      "imgSrc": "illust/black.jpg",
       "gridSpan": 4,
       "description": "A black cat"
     },
     {
-      "imgSrc": "./illust/pidgeon.jpg",
+      "imgSrc": "illust/pidgeon.jpg",
       "gridSpan": 4,
       "description": "Skating bird"
     },
     {
-      "imgSrc": "./illust/pidge.jpg",
+      "imgSrc": "illust/pidge.jpg",
       "gridSpan": 4,
       "description": "Sticker design"
     },
     {
-      "imgSrc": "./illust/pig.jpg",
+      "imgSrc": "illust/pig.jpg",
       "gridSpan": 4,
       "description": "Greeting card design"
     }

@@ -1,32 +1,32 @@
 {
   "items": [
     {
-      "imgSrc": "./cd/Frontloading.jpg",
+      "imgSrc": "cd/Frontloading.jpg",
       "gridSpan": 6,
       "description": "Concept art for a DoGo dash."
     },
     {
-      "imgSrc": "./gifs/dogorun.gif",
+      "imgSrc": "gifs/dogorun.gif",
       "gridSpan": 6,
       "description": "Running dog for a game concept"
     },
     {
-      "imgSrc": "./gifs/dogosit.gif",
+      "imgSrc": "gifs/dogosit.gif",
       "gridSpan": 6,
       "description": "Panting dog for a game concept"
     },
     {
-      "imgSrc": "./cd/Test.jpg",
+      "imgSrc": "cd/Test.jpg",
       "gridSpan": 6,
       "description": "Concept art for a DoGo dash."
     },
     {
-      "imgSrc": "./cd/elements.jpg",
+      "imgSrc": "cd/elements.jpg",
       "gridSpan": 6,
       "description": "Concept art for a DoGo dash."
     },
     {
-      "imgSrc": "./cd/dogologos.jpg",
+      "imgSrc": "cd/dogologos.jpg",
       "gridSpan": 6,
       "description": "Logo sketches for the game."
     }

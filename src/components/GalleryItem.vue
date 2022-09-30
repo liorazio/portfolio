@@ -19,8 +19,8 @@
 
 <script>
 import {uuid} from 'vue-uuid';
-import CenterGridItem from "@/components/CenterGridItem";
-import GalleryItemModal from "@/components/GalleryItemModal";
+import CenterGridItem from "@/components/CenterGridItem.vue";
+import GalleryItemModal from "@/components/GalleryItemModal.vue";
 
 export default {
   name: "GalleryItem",
@@ -66,11 +66,10 @@ export default {
     window.removeEventListener('resize', this.onResize)
   },
   data: function () {
-    const images = require.context('../assets/', true, /.*\.(gif|png|jpe?g|svg)$/)
     return {
       showModal: false,
       gridSpanCalc: this.gridSpan,
-      pictureStatic: images(this.imgSrc),
+      pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
       windowInnerWidthBig: false
     }
   },
@@ -88,9 +87,11 @@ export default {
 figcaption {
   display: none;
 }
-p{
+
+p {
   font-size: 20px;
 }
+
 .img-grid-x4-span {
   width: 16vw;
   height: 16vw

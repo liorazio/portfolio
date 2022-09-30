@@ -21,7 +21,7 @@
       <a href="https://instagram.com/liorazio" target="_blank"><i class="social fab fa-instagram-square"></i></a>
     </h4>
     <div>
-      <img :src="pictureStatic" alt="about me">
+      <img src="@/assets/aboutme.gif" alt="about me">
     </div>
     <h3></h3>
   </div>
@@ -34,11 +34,6 @@
 export default {
   name: 'About',
   components: {},
-  data: function () {
-    return {
-      pictureStatic: require("../assets/aboutme.gif")
-    }
-  }
 }
 </script>
 

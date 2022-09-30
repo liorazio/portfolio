@@ -21,17 +21,17 @@
 
 <script>
 import {defineAsyncComponent} from "vue";
-import CenterGrid from "@/components/CenterGrid";
-import CenterGridItem from "@/components/CenterGridItem";
+import CenterGrid from "@/components/CenterGrid.vue";
+import CenterGridItem from "@/components/CenterGridItem.vue";
 
 const AsyncGalleryItem = defineAsyncComponent({
   name: 'AsyncGalleryItem',
-  loader: () => import(/* webpackChunkName: 'galleryItem' */ '@/components/GalleryItem'),
+  loader: () => import('@/components/GalleryItem.vue'),
   loadingComponent: CenterGridItem,
 })
 const AsyncProject = defineAsyncComponent({
   name: 'AsyncGalleryItem',
-  loader: () => import(/* webpackChunkName: 'project' */ '@/components/Project'),
+  loader: () => import('@/components/Project.vue'),
   loadingComponent: CenterGridItem,
 })
 
@@ -46,7 +46,7 @@ export default {
     itemList: {
       type: String,
       required: false,
-      default: './cd.json'
+      default: 'cd.json'
     },
     heading: {
       type: String,
@@ -56,9 +56,9 @@ export default {
 
   },
   methods: {
-    loadItemList: function () {
-      const json = require.context("../assets/json", false, /.*\.json$/)
-      const readobj = json(this.itemList);
+    loadItemList: async function () {
+      const readobj = await (await fetch(new URL(`/src/assets/json/${this.itemList}`, import.meta.url).href)).json()
+
       this.items = readobj.items
       // .filter(x => (!('enabled' in x)) || x.enabled);
       this.projects = ('projects' in readobj) ? readobj.projects
@@ -66,13 +66,14 @@ export default {
           : null;
       this.videoSrc = readobj.videoSrc;
       this.videoDescription = readobj.videoDescription;
+      console.log(readobj)
     }
   },
-  mounted: function () {
-    this.loadItemList()
+  mounted: async function () {
+    await this.loadItemList()
   },
-  updated: function () {
-    this.loadItemList()
+  updated: async function () {
+    await this.loadItemList()
   },
   data: function () {
     return {

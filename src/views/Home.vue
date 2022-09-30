@@ -17,19 +17,19 @@
         <CenterGrid>
           <!--          <Project title="Character design" imgSrc="./cd/cdthumb.jpg"-->
           <!--                   :routeTo="{name: 'cd'}"/>-->
-          <AsyncProject :grid-span="4" title="Illustrations & Concept" imgSrc="./illust/illustthumb.jpg"
+          <AsyncProject :grid-span="4" title="Illustrations & Concept" imgSrc="illust/illustthumb.jpg"
                         :routeTo="{name: 'illust'}"/>
-          <AsyncProject title="Gifs & Animation" :grid-span="4" imgSrc="./gifs/runsmall.gif"
+          <AsyncProject title="Gifs & Animation" :grid-span="4" imgSrc="gifs/runsmall.gif"
                         :routeTo="{name: 'gifs'}"/>
-          <AsyncProject :grid-span="4" title="Sketch book" imgSrc="./sketch/sketchthumb.jpg"
+          <AsyncProject :grid-span="4" title="Sketch book" imgSrc="sketch/sketchthumb.jpg"
                         :routeTo="{name: 'sketch'}"/>
         </CenterGrid>
 
         <WideHeader>Projects</WideHeader>
         <CenterGrid>
-          <AsyncProject title="Golden aggle" imgSrc="./golden/goldenthumb.jpg"
+          <AsyncProject title="Golden aggle" imgSrc="golden/goldenthumb.jpg"
                         :routeTo="{name: 'golden'}"/>
-          <AsyncProject title="DoGo Dash" imgSrc="./cd/Frontloading.jpg"
+          <AsyncProject title="DoGo Dash" imgSrc="cd/Frontloading.jpg"
                         :routeTo="{name: 'dogo'}"/>
 
         </CenterGrid>
@@ -43,15 +43,14 @@
 // @ is an alias to /src
 import {defineAsyncComponent} from "vue";
 
-// import Project from "@/components/Project";
-import WideHeader from "@/components/WideHeader";
-import CenterGrid from "@/components/CenterGrid";
-import CenterGridItem from "@/components/CenterGridItem";
+import WideHeader from "@/components/WideHeader.vue";
+import CenterGrid from "@/components/CenterGrid.vue";
+import CenterGridItem from "@/components/CenterGridItem.vue";
 
 // Async component with options
 const AsyncProject = defineAsyncComponent({
   name: 'AsyncGalleryItem',
-  loader: () => import(/* webpackChunkName: 'project' */ '@/components/Project'),
+  loader: () => import( '@/components/Project.vue'),
   loadingComponent: CenterGridItem,
 })
 
