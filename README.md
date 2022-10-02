@@ -21,9 +21,10 @@ npm run dev
 npm run build
 ```
 
-### Preview distribution before deployment
+### build local distribution to test before deployment
 
 ```
+npm run buildlocal
 npm run preview
 ```
 

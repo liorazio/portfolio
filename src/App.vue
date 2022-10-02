@@ -82,7 +82,7 @@ export default {
   name: "App",
   data: function () {
     return {
-      windowInnerWidthBig: true
+      windowInnerWidthBig: true,
     }
   },
   methods: {
@@ -237,7 +237,7 @@ footer a.router-link-exact-active {
 
 @media only screen and (max-width: 768px) {
 
-  li{
+  li {
     padding: 0.6em;
   }
 
