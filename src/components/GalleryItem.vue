@@ -1,20 +1,20 @@
 <template>
-  <CenterGridItem :gridSpan="this.gridSpan">
-    <figure>
-      <img
-          @click="showModal = windowInnerWidthBig"
-          :class="'gallery-img img-grid-x' + gridSpanCalc +'-span'"
-          :src="pictureStatic" alt="gallery image"/>
-      <div v-if="windowInnerWidthBig">
-        <GalleryItemModal v-if="showModal" :imgSrc="pictureStatic" :caption="caption" :description="description"
-                          @modal-overlay-click="showModal = false"/>
-      </div>
-      <figcaption>
-        <h3 v-if="caption">{{ caption }}</h3>
-        <p>{{ description }}</p>
-      </figcaption>
-    </figure>
-  </CenterGridItem>
+    <CenterGridItem :gridSpan="this.gridSpan">
+        <figure>
+            <img
+                    @click="showModal = windowInnerWidthBig"
+                    :class="'gallery-img img-grid-x' + gridSpanCalc +'-span'"
+                    :src="pictureStatic" alt="gallery image"/>
+            <div v-if="windowInnerWidthBig">
+                <GalleryItemModal v-if="showModal" :imgSrc="pictureStatic" :caption="caption" :description="description"
+                                  @modal-overlay-click="showModal = false"/>
+            </div>
+            <figcaption>
+                <h3 v-if="caption">{{ caption }}</h3>
+                <p>{{ description }}</p>
+            </figcaption>
+        </figure>
+    </CenterGridItem>
 </template>
 
 <script>
@@ -23,61 +23,61 @@ import CenterGridItem from "@/components/CenterGridItem.vue";
 import GalleryItemModal from "@/components/GalleryItemModal.vue";
 
 export default {
-  name: "GalleryItem",
-  components: {GalleryItemModal, CenterGridItem},
-  props: {
-    gridSpan: {
-      type: Number,
-      required: false,
-      default: 4
+    name: "GalleryItem",
+    components: {GalleryItemModal, CenterGridItem},
+    props: {
+        gridSpan: {
+            type: Number,
+            required: false,
+            default: 4
+        },
+        caption: {
+            type: String,
+            required: false,
+            default: null
+        },
+        description: {
+            type: String,
+            required: false,
+            default: "Gallery Item"
+        },
+        imgSrc: {
+            type: String,
+            required: true
+        }
     },
-    caption: {
-      type: String,
-      required: false,
-      default: null
+    methods: {
+        onResize: function () {
+            //img style caclucalte for resize
+            if (window.innerWidth > 768) {
+                this.windowInnerWidthBig = true
+                this.gridSpanCalc = this.gridSpan;
+            } else {
+                this.windowInnerWidthBig = false
+                this.gridSpanCalc = 12;
+            }
+        },
     },
-    description: {
-      type: String,
-      required: false,
-      default: "Gallery Item"
+    mounted() {
+        this.onResize()
+        window.addEventListener('resize', this.onResize)
     },
-    imgSrc: {
-      type: String,
-      required: true
+    unmounted() {
+        window.removeEventListener('resize', this.onResize)
+    },
+    data: function () {
+        return {
+            showModal: false,
+            gridSpanCalc: this.gridSpan,
+            pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
+            windowInnerWidthBig: false
+        }
+    },
+    computed: {
+        spanId: function () {
+            return 'span-' + uuid.v4();
+        }
     }
-  },
-  methods: {
-    onResize: function () {
-      //img style caclucalte for resize
-      if (window.innerWidth > 768) {
-        this.windowInnerWidthBig = true
-        this.gridSpanCalc = this.gridSpan;
-      } else {
-        this.windowInnerWidthBig = false
-        this.gridSpanCalc = 12;
-      }
-    },
-  },
-  mounted() {
-    this.onResize()
-    window.addEventListener('resize', this.onResize)
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.onResize)
-  },
-  data: function () {
-    return {
-      showModal: false,
-      gridSpanCalc: this.gridSpan,
-      pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
-      windowInnerWidthBig: false
-    }
-  },
-  computed: {
-    spanId: function () {
-      return 'span-' + uuid.v4();
-    }
-  }
 
 
 }
@@ -85,62 +85,62 @@ export default {
 
 <style scoped>
 figcaption {
-  display: none;
+    display: none;
 }
 
 p {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .img-grid-x4-span {
-  width: 16vw;
-  height: 16vw
+    width: 16vw;
+    height: 16vw
 }
 
 .img-grid-x6-span {
-  width: 24.5vw;
-  height: 24.5vw;
+    width: 24.5vw;
+    height: 24.5vw;
 }
 
 .img-grid-x12-span {
-  width: 50vw;
-  height: 50vw
+    width: 50vw;
+    height: 50vw
 }
 
 
 .gallery-img {
-  box-shadow: 2px 2px 4px #000000;
-  object-fit: cover;
-  object-position: center center;
-  transform: scale(1);
-  transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 4px #000000;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
 }
 
 .gallery-img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 @media only screen and (max-width: 768px) {
 
-  .img-grid-x12-span {
-    object-fit: contain;
-    width: 90vw;
-    height: auto;
-  }
+    .img-grid-x12-span {
+        object-fit: contain;
+        width: 90vw;
+        height: auto;
+    }
 
-  figcaption {
-    display: block;
-  }
+    figcaption {
+        display: block;
+    }
 
-  .gallery-img {
-    box-shadow: 2px 2px 4px #000000;
-    transition: none;
-    transform: none;
-  }
+    .gallery-img {
+        box-shadow: 2px 2px 4px #000000;
+        transition: none;
+        transform: none;
+    }
 
-  .gallery-img:hover {
-    transform: none;
-  }
+    .gallery-img:hover {
+        transform: none;
+    }
 }
 
 

@@ -28,6 +28,7 @@ export default defineConfig(({command, mode}) => {
                 '@': fileURLToPath(new URL('./src', import.meta.url))
             }
         },
-        base: env.VITE_APP_HOST_URL
+        base: env.VITE_APP_HOST_URL,
+        debug: env.VITE_DEBUG === 'true'
     }
 })
