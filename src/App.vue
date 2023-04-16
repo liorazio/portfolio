@@ -75,7 +75,6 @@
             &nbsp;&nbsp;
             <a href="https://instagram.com/liorazio" target="_blank"><i class="social fab fa-instagram-square"></i></a>
         </div>
-        <p class="copyright">&copy; Copyright 2021 Lior Raz</p>
     </footer>
 </template>
 <script>
@@ -121,10 +120,6 @@ export default {
     color: gray;
     margin-bottom: 1rem;
     font-size: 40px;
-}
-
-.copyright {
-    padding-bottom: 30px;
 }
 
 .galleries {
