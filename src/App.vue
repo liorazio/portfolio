@@ -24,16 +24,16 @@
                                 Categories
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'gifs'}}">Gifs & Animation &nbsp; &nbsp;
+                                <router-link :to="this.galleryRoutes.gifs">Gifs & Animation &nbsp; &nbsp;
                                     &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'illustrations'}}">Illustrations
+                                <router-link :to="this.galleryRoutes.illust">Illustrations
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'sketch-book'}}">Sketch book &nbsp; &nbsp;&nbsp;
+                                <router-link :to="this.galleryRoutes.sketch">Sketch book &nbsp; &nbsp;&nbsp;
                                     &nbsp;&nbsp; &nbsp;&nbsp;
                                     &nbsp;
                                 </router-link>
@@ -42,11 +42,11 @@
                                 Projects&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'dogo-dash'}}">DoGo dash&nbsp;&nbsp;
+                                <router-link :to="this.galleryRoutes.dogo">DoGo dash&nbsp;&nbsp;
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'golden-aggle'}}">Golden aggle
+                                <router-link :to="this.galleryRoutes.golden">Golden aggle
                                 </router-link>
                             </li>
                         </ul>
@@ -64,15 +64,15 @@
             |
             <router-link to="/about">About</router-link>
             |
-            <router-link :to="{name:'Gallery', params:{id:'gifs'}}">Gifs & Animation</router-link>
+            <router-link :to="this.galleryRoutes.gifs">Gifs & Animation</router-link>
             |
-            <router-link :to="{name:'Gallery', params:{id:'illustrations'}}">Illustrations & Concept</router-link>
+            <router-link :to="this.galleryRoutes.illust">Illustrations & Concept</router-link>
             |
-            <router-link :to="{name:'Gallery', params:{id:'sketch-book'}}">Sketch book</router-link>
+            <router-link :to="this.galleryRoutes.sketch">Sketch book</router-link>
             |
-            <router-link :to="{name:'Gallery', params:{id:'dogo-dash'}}">DoGo dash</router-link>
+            <router-link :to="this.galleryRoutes.dogo">DoGo dash</router-link>
             |
-            <router-link :to="{name:'Gallery', params:{id:'golden-aggle'}}">Golden aggle</router-link>
+            <router-link :to="this.galleryRoutes.golden">Golden aggle</router-link>
         </div>
         <div>
             <a href="https://www.facebook.com/Liorazioo" target="_blank"><i
@@ -90,6 +90,14 @@ export default {
     data: function () {
         return {
             windowInnerWidthBig: true,
+            galleryRoutes: {
+                gifs: {name: 'Gallery', params: {id: 'gifs'}},
+                illust: {name: 'Gallery', params: {id: 'illustrations'}},
+                sketch: {name: 'Gallery', params: {id: 'sketch-book'}},
+                dogo: {name: 'Gallery', params: {id: 'dogo-dash'}},
+                golden: {name: 'Gallery', params: {id: 'golden-aggle'}},
+
+            }
         }
     },
     methods: {

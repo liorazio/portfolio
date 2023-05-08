@@ -3,7 +3,7 @@
         <figure>
             <img
                     @click="showModal = windowInnerWidthBig"
-                    :class="'gallery-img img-grid-x' + gridSpanCalc +'-span'"
+                    :class="`gallery-img img-grid-x${gridSpanCalc}-span`"
                     :src="pictureStatic" alt="gallery image"/>
             <div v-if="windowInnerWidthBig">
                 <GalleryItemModal v-if="showModal" :imgSrc="pictureStatic" :caption="caption" :description="description"
@@ -75,7 +75,7 @@ export default {
     },
     computed: {
         spanId: function () {
-            return 'span-' + uuid.v4();
+            return `span-${uuid.v4()}`;
         }
     }
 

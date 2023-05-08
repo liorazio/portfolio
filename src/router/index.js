@@ -23,36 +23,6 @@ const routes = [
         component: Gallery,
         props: true
     }
-    // {
-    //     path: '/dogo-dash',
-    //     name: 'dogo',
-    //     component: Gallery,
-    //     props: {itemList: 'dogo.json', heading: 'DoGo Dash'}
-    // },
-    // {
-    //     path: '/gifs',
-    //     name: 'gifs',
-    //     component: Gallery,
-    //     props: {itemList: 'gifs.json', heading: 'Gifs & Animation'}
-    // },
-    // {
-    //     path: '/golden-aggle',
-    //     name: 'golden',
-    //     component: Gallery,
-    //     props: {itemList: 'golden.json', heading: 'Golden aggle'}
-    // },
-    // {
-    //     path: '/illustrations',
-    //     name: 'illust',
-    //     component: Gallery,
-    //     props: {itemList: 'illust.json', heading: 'Illustrations & Concept'}
-    // },
-    // {
-    //     path: '/sketch-book',
-    //     name: 'sketch',
-    //     component: Gallery,
-    //     props: {itemList: 'sketch.json', heading: 'Sketch book'}
-    // }
 ]
 
 const router = createRouter({

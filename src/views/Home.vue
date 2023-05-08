@@ -16,7 +16,6 @@
                     <AsyncProject :grid-span="4" title="Sketch book" imgSrc="sketch/sketchthumb.jpg"
                                   :routeTo="{name:'Gallery', params:{id:'sketch-book'}}"/>
                 </CenterGrid>
-
                 <WideHeader>Projects</WideHeader>
                 <CenterGrid>
                     <AsyncProject title="Golden aggle" imgSrc="golden/goldenthumb.jpg"

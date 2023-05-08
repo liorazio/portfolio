@@ -4,7 +4,7 @@
             <router-link :to="this.routeTo">
                 <img
                         @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
-                        :class="'img-grid-x' + gridSpanCalc +'-span'"
+                        :class="`img-grid-x${gridSpanCalc}-span`"
                         :src="pictureStatic" alt="img stab"/>
             </router-link>
             <figcaption>

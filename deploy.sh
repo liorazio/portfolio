@@ -13,13 +13,13 @@ find gitdist -maxdepth 1 ! -iname '.git' ! -iname 'gitdist' -print0 | xargs -0 -
 
 # build
 npm run build
-
+version=$(node -p "require('./package.json').version")
 # copy all build files to git working directory
 cp -a ./dist/* ./gitdist/
 
 # create and push deploy commit
 pushd gitdist
 git add .
-git commit -am "deploy $(date '+%d-%b %H:%M')"
+git commit -am "deploy version ${version} $(date '+%d-%b %H:%M')"
 git push origin HEAD
 popd
