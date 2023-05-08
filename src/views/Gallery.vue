@@ -6,16 +6,16 @@
         <div v-if="videoDescription" class="vid-desc">
             <p>{{ this.videoDescription }}</p>
         </div>
-        <CenterGrid v-if="items">
-            <AsyncGalleryItem v-for="item in items" :key="'galleryItem/' + itemList + '/' +item.imgSrc"
+        <CenterGrid v-if="items ?? null">
+            <AsyncGalleryItem v-for="item in items" :key="`galleryItem/${itemList}/${item.imgSrc}`"
                               :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
                               :description="item.description"/>
         </CenterGrid>
-        <h2 v-if="projects">Related projects</h2>
+        <h2 v-if="projects ?? null">Related projects</h2>
         <CenterGrid v-if="projects">
             <AsyncProject v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc"
                           :gridSpan="item.gridSpan"
-                          :title="item.description" :key="'project/' + itemList + '/' +item.imgSrc"/>
+                          :title="item.description" :key="`project/${itemList}/${item.imgSrc}`"/>
         </CenterGrid>
     </div>
 </template>
@@ -33,6 +33,18 @@ const AsyncProject = defineAsyncComponent({
     loader: () => import('@/components/Project.vue'),
 })
 
+const cleanData = function () {
+    return {
+        items: null,
+        itemList: "",
+        projects: null,
+        videoSrc: "",
+        videoDescription: "",
+        heading: "",
+        mapping: {}
+    }
+}
+
 export default {
     name: "Projects",
     components: {
@@ -47,47 +59,32 @@ export default {
         }
     },
     methods: {
-        loadItemList: function (id) {
-            fetch(new URL(`/src/assets/json/mapping.json`, import.meta.url).href)
-                .then(response => response.json())
-                .then(mapping => {
-                    const params = mapping[id];
-                    fetch(new URL(`/src/assets/json/${params.itemList}`, import.meta.url).href)
-                        .then(response => response.json())
-                        .then(readobj => {
-                            this.loadedItemList = params.itemList
-                            this.items = readobj.items
-                            // .filter(x => (!('enabled' in x)) || x.enabled);
-                            this.projects = ('projects' in readobj) ? readobj.projects
-                                // .filter(x => (!('enabled' in x)) || x.enabled)
-                                : null;
-                            this.videoSrc = readobj.videoSrc
-                            this.videoDescription = readobj.videoDescription
-                            this.heading = params.heading
-                            console.log(readobj)
-                        });
-                });
+        readJsonFromUrl: async function (url) {
+            const response = await fetch(new URL(url, import.meta.url).href)
+            return await response.json()
         },
-
+        loadNewJsonAssets: async function (id) {
+            Object.assign(this, this.mapping[id])
+            Object.assign(this, await this.readJsonFromUrl(`/src/assets/json/${this.itemList}`));
+            console.log(`loaded new json assets for: ${id}`)
+        },
+        clean: function () {
+            Object.keys(cleanData()).filter(key => key !== "mapping").forEach(key => {
+                this[key] = null
+            })
+        }
     },
     mounted: async function () {
-        await this.loadItemList(this.id)
+        this.mapping = await this.readJsonFromUrl("/src/assets/json/mapping.json")
+        console.log(`during Gallery component mount, found ${Object.keys(this.mapping).length} mappings.`)
+        await this.loadNewJsonAssets(this.id)
     },
-    beforeRouteUpdate: async function (to, from) {
-        console.log(`beforeRouteEnter ${to.params.id}`)
-        console.trace()
-        await this.loadItemList(to.params.id)
+    beforeRouteUpdate: function (to, from) {
+        this.clean()
+        this.loadNewJsonAssets(to.params.id)
     },
-    data: function () {
-        return {
-            loadedItemList: "none",
-            items: [],
-            projects: [],
-            videoSrc: "",
-            videoDescription: "",
-            heading: ""
-        }
-    }
+    data: cleanData
+
 }
 </script>
 
