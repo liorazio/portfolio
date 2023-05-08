@@ -24,14 +24,17 @@
                                 Categories
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'gifs'}}">Gifs & Animation &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                <router-link :to="{name:'Gallery', params:{id:'gifs'}}">Gifs & Animation &nbsp; &nbsp;
+                                    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'illustrations'}}">Illustrations</router-link>
+                                <router-link :to="{name:'Gallery', params:{id:'illustrations'}}">Illustrations
+                                </router-link>
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'sketch-book'}}">Sketch book &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                                <router-link :to="{name:'Gallery', params:{id:'sketch-book'}}">Sketch book &nbsp; &nbsp;&nbsp;
+                                    &nbsp;&nbsp; &nbsp;&nbsp;
                                     &nbsp;
                                 </router-link>
                             </li>
@@ -39,10 +42,12 @@
                                 Projects&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'dogo-dash'}}">DoGo dash&nbsp;&nbsp;</router-link>
+                                <router-link :to="{name:'Gallery', params:{id:'dogo-dash'}}">DoGo dash&nbsp;&nbsp;
+                                </router-link>
                             </li>
                             <li>
-                                <router-link :to="{name:'Gallery', params:{id:'golden-aggle'}}">Golden aggle</router-link>
+                                <router-link :to="{name:'Gallery', params:{id:'golden-aggle'}}">Golden aggle
+                                </router-link>
                             </li>
                         </ul>
                     </li>

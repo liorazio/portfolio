@@ -21,7 +21,7 @@ export default defineConfig(({command, mode}) => {
         }
     }
     return {
-        plugins: [htmlPlugin(),vue()],
+        plugins: [htmlPlugin(), vue()],
         resolve: {
             extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue'],
             alias: {
