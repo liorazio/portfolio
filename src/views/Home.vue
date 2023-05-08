@@ -89,7 +89,7 @@ export default {
 
     .video {
         width: 90vw;
-        height: 50.625vw;  /* 90 x 0.5625 (9/16) aspect ration */
+        height: 50.625vw; /* 90 x 0.5625 (9/16) aspect ration */
 
     }
 }

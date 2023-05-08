@@ -20,6 +20,19 @@
 <script>
 export default {
     name: "GalleryItemModal",
+    mounted() {
+        document.addEventListener('keydown', this.onKeyDown);
+    },
+    beforeUnmount() {
+        document.removeEventListener('keydown', this.onKeyDown);
+    },
+    methods: {
+        onKeyDown(event) {
+            if (event.key === 'Escape') {
+                this.$emit('modal-overlay-click')
+            }
+        }
+    },
     props: {
         imgSrc: {
             type: String,
