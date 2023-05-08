@@ -66,8 +66,8 @@ export default {
     border-top-right-radius: 15px 225px;
     border-bottom-right-radius: 225px 15px;
     border-bottom-left-radius: 15px 255px;
-    width: 45%;
-    height: 25vw;
+    width: 45vw;
+    height: 25.3125vw; /* 45 x 0.5625 (9/16) aspect ration */
 }
 
 .canvas img {
@@ -88,8 +88,8 @@ export default {
     }
 
     .video {
-        width: 90%;
-        height: 52vw;
+        width: 90vw;
+        height: 50.625vw;  /* 90 x 0.5625 (9/16) aspect ration */
 
     }
 }
