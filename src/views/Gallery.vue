@@ -60,12 +60,12 @@ export default {
     },
     methods: {
         readJsonFromUrl: async function (url) {
-            const response = await fetch(new URL(url, import.meta.url).href)
+            const response = await fetch(url.href)
             return await response.json()
         },
         loadNewJsonAssets: async function (id) {
             Object.assign(this, this.mapping[id])
-            Object.assign(this, await this.readJsonFromUrl(`/src/assets/json/${this.itemList}`));
+            Object.assign(this, await this.readJsonFromUrl(new URL(`/src/assets/json/${this.itemList}`, import.meta.url)));
             console.log(`loaded new json assets for: ${id}`)
         },
         clean: function () {
@@ -75,7 +75,7 @@ export default {
         }
     },
     mounted: async function () {
-        this.mapping = await this.readJsonFromUrl("/src/assets/json/mapping.json")
+        this.mapping = await this.readJsonFromUrl(new URL("/src/assets/json/mapping.json", import.meta.url))
         console.log(`during Gallery component mount, found ${Object.keys(this.mapping).length} mappings.`)
         await this.loadNewJsonAssets(this.id)
     },
