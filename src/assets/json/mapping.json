@@ -1,0 +1,22 @@
+{
+  "dogo-dash": {
+    "itemList": "dogo.json",
+    "heading": "DoGo Dash"
+  },
+  "gifs": {
+    "itemList": "gifs.json",
+    "heading": "Gifs & Animation"
+  },
+  "golden-aggle": {
+    "itemList": "golden.json",
+    "heading": "Golden aggle"
+  },
+  "illustrations": {
+    "itemList": "illust.json",
+    "heading": "Illustrations & Concept"
+  },
+  "sketch-book": {
+    "itemList": "sketch.json",
+    "heading": "Sketch book"
+  }
+}

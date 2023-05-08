@@ -10,19 +10,19 @@
                 <WideHeader>Categories</WideHeader>
                 <CenterGrid>
                     <AsyncProject :grid-span="4" title="Illustrations & Concept" imgSrc="illust/illustthumb.jpg"
-                                  :routeTo="{name: 'illust'}"/>
+                                  :routeTo="{name:'Gallery', params:{id:'illustrations'}}"/>
                     <AsyncProject title="Gifs & Animation" :grid-span="4" imgSrc="gifs/runsmall.gif"
-                                  :routeTo="{name: 'gifs'}"/>
+                                  :routeTo="{name:'Gallery', params:{id:'gifs'}}"/>
                     <AsyncProject :grid-span="4" title="Sketch book" imgSrc="sketch/sketchthumb.jpg"
-                                  :routeTo="{name: 'sketch'}"/>
+                                  :routeTo="{name:'Gallery', params:{id:'sketch-book'}}"/>
                 </CenterGrid>
 
                 <WideHeader>Projects</WideHeader>
                 <CenterGrid>
                     <AsyncProject title="Golden aggle" imgSrc="golden/goldenthumb.jpg"
-                                  :routeTo="{name: 'golden'}"/>
+                                  :routeTo="{name:'Gallery', params:{id:'golden-aggle'}}"/>
                     <AsyncProject title="DoGo Dash" imgSrc="cd/Frontloading.jpg"
-                                  :routeTo="{name: 'dogo'}"/>
+                                  :routeTo="{name:'Gallery', params:{id:'dogo-dash'}}"/>
 
                 </CenterGrid>
             </div>

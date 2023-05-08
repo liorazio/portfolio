@@ -3,7 +3,10 @@
     {
       "imgSrc": "golden/poster.jpg",
       "routeTo": {
-        "name": "golden"
+        "name": "Gallery",
+        "params": {
+          "id": "golden-aggle"
+        }
       },
       "gridSpan": 4,
       "description": "The final poster"
@@ -11,7 +14,10 @@
     {
       "imgSrc": "cd/Frontloading.jpg",
       "routeTo": {
-        "name": "dogo"
+        "name": "Gallery",
+        "params": {
+          "id": "dogo-dash"
+        }
       },
       "gridSpan": 4,
       "description": "Dogo Dash"

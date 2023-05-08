@@ -3,14 +3,21 @@
     {
       "imgSrc": "golden/goldenthumb.gif",
       "routeTo": {
-        "name": "golden"
+        "name": "Gallery",
+        "params": {
+          "id": "golden-aggle"
+        }
       },
       "gridSpan": 4,
       "description": "The final poster"
-    } ,  {
+    },
+    {
       "imgSrc": "gifs/dogosit.gif",
       "routeTo": {
-        "name": "dogo"
+        "name": "Gallery",
+        "params": {
+          "id": "dogo-dash"
+        }
       },
       "gridSpan": 4,
       "description": "Dogo Dash"
@@ -31,7 +38,8 @@
       "imgSrc": "gifs/dog1.gif",
       "gridSpan": 4,
       "description": "Panting corgi"
-    },{
+    },
+    {
       "imgSrc": "gifs/fish1.gif",
       "gridSpan": 4,
       "description": "Small animation loop, part of a movie about india"
@@ -46,7 +54,6 @@
       "gridSpan": 6,
       "description": "Animation loop for Abook, a book about being a first time father"
     },
-
     {
       "imgSrc": "gifs/belly_yel.gif",
       "gridSpan": 6,

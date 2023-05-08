@@ -41,39 +41,42 @@ export default {
         CenterGrid
     },
     props: {
-        itemList: {
+        id: {
             type: String,
-            required: false,
-            default: 'cd.json'
-        },
-        heading: {
-            type: String,
-            required: false,
-            default: 'Gallery'
+            required: true
         }
-
     },
     methods: {
-        loadItemList: async function () {
-            if (this.loadedItemList !== this.itemList) {
-                const readobj = await (await fetch(new URL(`/src/assets/json/${this.itemList}`, import.meta.url).href)).json()
-                this.loadedItemList = this.itemList
-                this.items = readobj.items
-                // .filter(x => (!('enabled' in x)) || x.enabled);
-                this.projects = ('projects' in readobj) ? readobj.projects
-                    // .filter(x => (!('enabled' in x)) || x.enabled)
-                    : null;
-                this.videoSrc = readobj.videoSrc;
-                this.videoDescription = readobj.videoDescription;
-                console.log(readobj)
-            }
-        }
+        loadItemList: function (id) {
+            fetch(new URL(`/src/assets/json/mapping.json`, import.meta.url).href)
+                .then(response => response.json())
+                .then(mapping => {
+                    const params = mapping[id];
+                    fetch(new URL(`/src/assets/json/${params.itemList}`, import.meta.url).href)
+                        .then(response => response.json())
+                        .then(readobj => {
+                            this.loadedItemList = params.itemList
+                            this.items = readobj.items
+                            // .filter(x => (!('enabled' in x)) || x.enabled);
+                            this.projects = ('projects' in readobj) ? readobj.projects
+                                // .filter(x => (!('enabled' in x)) || x.enabled)
+                                : null;
+                            this.videoSrc = readobj.videoSrc
+                            this.videoDescription = readobj.videoDescription
+                            this.heading = params.heading
+                            console.log(readobj)
+                        });
+                });
+        },
+
     },
     mounted: async function () {
-        await this.loadItemList()
+        await this.loadItemList(this.id)
     },
-    updated: async function () {
-        await this.loadItemList()
+    beforeRouteUpdate: async function (to, from) {
+        console.log(`beforeRouteEnter ${to.params.id}`)
+        console.trace()
+        await this.loadItemList(to.params.id)
     },
     data: function () {
         return {
@@ -81,7 +84,8 @@ export default {
             items: [],
             projects: [],
             videoSrc: "",
-            videoDescription: ""
+            videoDescription: "",
+            heading: ""
         }
     }
 }
