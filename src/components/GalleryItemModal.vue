@@ -1,12 +1,12 @@
 <template>
     <transition type="transition" appear>
-        <div class="modal-overlay" @click="$emit('modal-close')">
+        <div class="modal-overlay" @click="closeModal()">
         </div>
     </transition>
     <transition type="transition" appear>
         <div class="modal" role="dialog">
             <div class="btn-close">
-                <i @click="$emit('modal-close')" id="btn-close" class="far fa-window-close"></i>
+                <i @click="closeModal()" id="btn-close" class="fa-regular fa-rectangle-xmark"></i>
             </div>
             <img class="modal-img" :src="this.imgSrc" alt="bigger img">
             <div class="text-under-img">
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+
 export default {
     name: "GalleryItemModal",
     mounted: function () {
@@ -27,9 +28,12 @@ export default {
         document.removeEventListener('keydown', this.onKeyDown);
     },
     methods: {
-        onKeyDown(event) {
+        closeModal: function () {
+            this.$emit('modal-close')
+        },
+        onKeyDown: function (event) {
             if (event.key === 'Escape') {
-                this.$emit('modal-close')
+                this.closeModal()
             }
         }
     },

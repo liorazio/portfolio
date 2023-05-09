@@ -5,7 +5,7 @@
                     @click="doShowModal()"
                     :class="`gallery-img img-grid-x${gridSpanCalc}-span`"
                     :src="pictureStatic" alt="gallery image"/>
-            <div v-if="windowInnerWidthBig">
+            <div v-if="modalEnabled">
                 <GalleryItemModal v-if="showModal" :imgSrc="pictureStatic" :caption="caption" :description="description"
                                   @modal-close="doHideModal"/>
             </div>
@@ -50,17 +50,15 @@ export default {
         onResize: function () {
             //img style caclucalte for resize
             if (window.innerWidth > 768) {
-                this.windowInnerWidthBig = true
+                this.modalEnabled = true
                 this.gridSpanCalc = this.gridSpan;
             } else {
-                this.windowInnerWidthBig = false
+                this.modalEnabled = false
                 this.gridSpanCalc = 12;
             }
         },
         doShowModal: function () {
-            this.showModal = this.windowInnerWidthBig;
-            console.log('doShowModal')
-            console.trace()
+            this.showModal = this.modalEnabled;
         },
         doHideModal: function () {
             this.showModal = false;
@@ -78,7 +76,7 @@ export default {
             showModal: false,
             gridSpanCalc: this.gridSpan,
             pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
-            windowInnerWidthBig: false
+            modalEnabled: false
         }
     },
     computed: {
