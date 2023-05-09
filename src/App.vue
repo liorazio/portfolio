@@ -74,19 +74,17 @@
             |
             <router-link :to="this.galleryRoutes.golden">Golden aggle</router-link>
         </div>
-        <div>
-            <a href="https://www.facebook.com/Liorazioo" target="_blank"><i
-                    class="social fab fa-facebook-square"></i></a>
-            &nbsp;&nbsp;
-            <a href="https://instagram.com/liorazio" target="_blank"><i class="social fab fa-instagram-square"></i></a>
-        </div>
+        <Social/>
     </footer>
 </template>
 <script>
 
 
+import Social from "@/components/Social.vue";
+
 export default {
     name: "App",
+    components: {Social},
     data: function () {
         return {
             windowInnerWidthBig: true,
@@ -129,11 +127,6 @@ export default {
     width: 100%;
 }
 
-.social {
-    color: gray;
-    margin-bottom: 1rem;
-    font-size: 40px;
-}
 
 .galleries {
     margin-right: 4rem;

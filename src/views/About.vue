@@ -1,7 +1,7 @@
 <template>
     <div class="about">
         <h1 class="header">About me</h1>
-        <h3 class="first-line">Lior raz
+        <h3 class="first-line">Lior Raz
         </h3>
         <p>
             Animator, illustrator, concept and storyboard artist.
@@ -14,12 +14,12 @@
         </p>
         <h3 class="first-line"> Lets have fun!</h3>
         <h4 class="first-line">Contact me:</h4>
-        <h3 class="first-line"><a class="mail" href="mailto:lior.raaz@gmail.com">lior.raaz@gmail.com</a></h3>
+        <h3 class="first-line">
+            <a class="mail"
+               href="mailto:lior.raaz@gmail.com?subject=Here%20from%20liorazio.github.io&body=Hi%20Lior.%0AI%20saw%20your%20portfolio%20online%20and%20wanted%20to%20connect."
+               target="_blank">lior.raaz@gmail.com</a></h3>
         <h4 class="first-line">
-            <a href="https://www.facebook.com/Liorazioo" target="_blank"><i
-                    class="social fab fa-facebook-square"></i></a>
-            &nbsp;&nbsp;
-            <a href="https://instagram.com/liorazio" target="_blank"><i class="social fab fa-instagram-square"></i></a>
+            <Social/>
         </h4>
         <div>
             <img src="@/assets/aboutme.gif" alt="about me">
@@ -32,9 +32,11 @@
 <script>
 // @ is an alias to /src
 
+import Social from "@/components/Social.vue";
+
 export default {
     name: 'About',
-    components: {},
+    components: {Social},
 }
 </script>
 

@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import {uuid} from 'vue-uuid';
 import CenterGridItem from "@/components/CenterGridItem.vue";
 import GalleryItemModal from "@/components/GalleryItemModal.vue";
 
@@ -77,11 +76,6 @@ export default {
             gridSpanCalc: this.gridSpan,
             pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
             modalEnabled: false
-        }
-    },
-    computed: {
-        spanId: function () {
-            return `span-${uuid.v4()}`;
         }
     }
 }

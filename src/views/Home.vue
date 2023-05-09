@@ -73,7 +73,6 @@ export default {
 
     .canvas img {
         padding: 0;
-        /*margin-top: 30px;*/
         width: 95%;
     }
 }

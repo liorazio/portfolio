@@ -10,9 +10,7 @@
             <figcaption>
                 <p>{{ title }}</p>
             </figcaption>
-            <span :id="spanId">
-       <h2>{{ title }}</h2>
-      </span>
+            <span :id="spanId">{{ title }}</span>
         </figure>
     </CenterGridItem>
 </template>
@@ -102,9 +100,10 @@ span {
     white-space: nowrap;
     display: none;
     padding: 1rem;
-    font-weight: 400;
     margin-top: 1.25rem;
     margin-left: -2rem;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 figcaption {
