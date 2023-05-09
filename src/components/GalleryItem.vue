@@ -2,12 +2,12 @@
     <CenterGridItem :gridSpan="this.gridSpan">
         <figure>
             <img
-                    @click="showModal = windowInnerWidthBig"
+                    @click="doShowModal()"
                     :class="`gallery-img img-grid-x${gridSpanCalc}-span`"
                     :src="pictureStatic" alt="gallery image"/>
             <div v-if="windowInnerWidthBig">
                 <GalleryItemModal v-if="showModal" :imgSrc="pictureStatic" :caption="caption" :description="description"
-                                  @modal-overlay-click="showModal = false"/>
+                                  @modal-close="doHideModal"/>
             </div>
             <figcaption>
                 <h3 v-if="caption">{{ caption }}</h3>
@@ -57,12 +57,20 @@ export default {
                 this.gridSpanCalc = 12;
             }
         },
+        doShowModal: function () {
+            this.showModal = this.windowInnerWidthBig;
+            console.log('doShowModal')
+            console.trace()
+        },
+        doHideModal: function () {
+            this.showModal = false;
+        }
     },
     mounted() {
         this.onResize()
         window.addEventListener('resize', this.onResize)
     },
-    unmounted() {
+    beforeUnmount: function () {
         window.removeEventListener('resize', this.onResize)
     },
     data: function () {
@@ -78,8 +86,6 @@ export default {
             return `span-${uuid.v4()}`;
         }
     }
-
-
 }
 </script>
 

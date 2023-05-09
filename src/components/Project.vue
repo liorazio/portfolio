@@ -72,7 +72,7 @@ export default {
         this.onResize()
         window.addEventListener('resize', this.onResize)
     },
-    unmounted() {
+    beforeUnmount: function () {
         window.removeEventListener('resize', this.onResize)
     },
     data: function () {
@@ -113,19 +113,16 @@ figcaption {
 
 .img-grid-x4-span {
     width: 16vw;
-    /*height: 12vw*/
     height: 16vw
 }
 
 .img-grid-x6-span {
     width: 24.5vw;
-    /*height: 18.38vw;*/
     height: 24.5vw;
 }
 
 .img-grid-x12-span {
     width: 50vw;
-    /*height: 37.5vw*/
     height: 50vw
 }
 
@@ -146,7 +143,6 @@ img:hover {
     .img-grid-x12-span {
         width: 90vw;
         height: 90vw;
-        /*height: 64.5vw*/
     }
 
     p {

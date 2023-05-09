@@ -2,8 +2,8 @@
     <div>
         <div class="canvas"><img alt="liorazio logo" src="../assets/logo.gif"></div>
         <div class="canvas"><img alt="liorazio banner" src="../assets/banner.png"></div>
-        <iframe class="video" src="https://www.youtube.com/embed/SDJmEvOiVkc?modestbranding=1&rel=0&disablekb=1"
-                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <EmbeddedVideo video-src="https://www.youtube.com/embed/SDJmEvOiVkc?modestbranding=1&rel=0&disablekb=1"
+                       :video-description="null"/>
 
         <section>
             <div id="projects">
@@ -36,6 +36,7 @@ import {defineAsyncComponent} from "vue";
 
 import WideHeader from "@/components/WideHeader.vue";
 import CenterGrid from "@/components/CenterGrid.vue";
+import EmbeddedVideo from "@/components/EmbeddedVideo.vue";
 
 // Async component with options
 const AsyncProject = defineAsyncComponent({
@@ -47,6 +48,7 @@ const AsyncProject = defineAsyncComponent({
 export default {
     name: 'Home',
     components: {
+        EmbeddedVideo,
         AsyncProject, WideHeader, CenterGrid
     }
 
@@ -56,18 +58,6 @@ export default {
 <style>
 #projects {
     margin-top: 3rem;
-}
-
-
-.video {
-    margin-top: 30px;
-    border: solid 15px #fb826b;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    border-bottom-right-radius: 225px 15px;
-    border-bottom-left-radius: 15px 255px;
-    width: 45vw;
-    height: 25.3125vw; /* 45 x 0.5625 (9/16) aspect ration */
 }
 
 .canvas img {
@@ -85,12 +75,6 @@ export default {
         padding: 0;
         /*margin-top: 30px;*/
         width: 95%;
-    }
-
-    .video {
-        width: 90vw;
-        height: 50.625vw; /* 90 x 0.5625 (9/16) aspect ration */
-
     }
 }
 </style>

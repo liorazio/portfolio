@@ -7,11 +7,10 @@
             Animator, illustrator, concept and storyboard artist.
         </p>
         <br>
-        <p>Hi! I graduated visual communication at H.I.T, Holon technological institute.
-            I love thinking creatively and come up with fun and smart solutions and concepts.
+        <p>Hi! I graduated visual communication at H.I.T, Holon technological institute.<br/>
+            I love thinking creatively and come up with fun and smart solutions and concepts.<br/>
             I worked for some time, as a freelance with musical artists, book publishing companies and many other
-            clients,
-            making animations, music clips, book designs, illustrations and many more.
+            clients, making animations, music clips, book designs, illustrations and many more.
         </p>
         <h3 class="first-line"> Lets have fun!</h3>
         <h4 class="first-line">Contact me:</h4>

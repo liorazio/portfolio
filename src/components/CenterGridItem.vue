@@ -27,11 +27,11 @@ export default {
             }
         }
     },
-    mounted() {
+    mounted: function () {
         this.onResize()
         window.addEventListener('resize', this.onResize)
     },
-    unmounted() {
+    beforeUnmount: function () {
         window.removeEventListener('resize', this.onResize)
     },
 }

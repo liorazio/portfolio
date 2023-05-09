@@ -105,11 +105,11 @@ export default {
             this.windowInnerWidthBig = window.innerWidth > 768;
         }
     },
-    mounted() {
+    mounted: function () {
         this.onResize()
         window.addEventListener('resize', this.onResize)
     },
-    unmounted() {
+    beforeUnmount: function () {
         window.removeEventListener('resize', this.onResize)
     },
 }

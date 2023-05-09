@@ -1,11 +1,7 @@
 <template>
     <div>
         <h1>{{ heading }}</h1>
-        <iframe v-if="videoSrc" class="video" :src="this.videoSrc"
-                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-        <div v-if="videoDescription" class="vid-desc">
-            <p>{{ this.videoDescription }}</p>
-        </div>
+        <EmbeddedVideo v-if="videoSrc" :video-src="videoSrc" :video-description="videoDescription"/>
         <CenterGrid v-if="items ?? null">
             <AsyncGalleryItem v-for="item in items" :key="`galleryItem/${itemList}/${item.imgSrc}`"
                               :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
@@ -23,6 +19,7 @@
 <script>
 import {defineAsyncComponent} from "vue";
 import CenterGrid from "@/components/CenterGrid.vue";
+import EmbeddedVideo from "@/components/EmbeddedVideo.vue";
 
 const AsyncGalleryItem = defineAsyncComponent({
     name: 'AsyncGalleryItem',
@@ -48,6 +45,7 @@ const cleanData = function () {
 export default {
     name: "Projects",
     components: {
+        EmbeddedVideo,
         AsyncGalleryItem,
         AsyncProject,
         CenterGrid
@@ -89,13 +87,7 @@ export default {
 </script>
 
 <style scoped>
-.vid-desc {
-    display: flex;
-    justify-content: center;
-    margin-top: 1em;
-    object-position: center;
-    text-align: left;
-}
+
 
 h1 {
     margin-bottom: 10px;
@@ -103,12 +95,6 @@ h1 {
 
 h3 {
     margin-top: 10px;
-}
-
-p {
-    font-size: 20px;
-    width: 100%;
-    max-width: 50vw;
 }
 
 @media only screen and (max-width: 768px) {
