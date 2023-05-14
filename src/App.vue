@@ -16,16 +16,11 @@
                         &nbsp;|
                         Galleries
                         <ul class="menu-level">
-                            <li class="empty-menu-line">
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
-                                &nbsp; &nbsp;
-                            </li>
-                            <li class="empty-menu-line">
-                                Categories
-                            </li>
+                            <li class="empty-menu-line"/>
+                            <li class="empty-menu-line">Categories</li>
                             <li>
-                                <router-link :to="this.galleryRoutes.gifs">Gifs & Animation &nbsp; &nbsp;
-                                    &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                <router-link :to="this.galleryRoutes.gifs">Gifs & Animation
+
                                 </router-link>
                             </li>
                             <li>
@@ -33,16 +28,15 @@
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="this.galleryRoutes.sketch">Sketch book &nbsp; &nbsp;&nbsp;
-                                    &nbsp;&nbsp; &nbsp;&nbsp;
-                                    &nbsp;
+                                <router-link :to="this.galleryRoutes.sketch">Sketch book
+
                                 </router-link>
                             </li>
                             <li class="empty-menu-line">
-                                Projects&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                                Projects
                             </li>
                             <li>
-                                <router-link :to="this.galleryRoutes.dogo">DoGo dash&nbsp;&nbsp;
+                                <router-link :to="this.galleryRoutes.dogo">DoGo dash
                                 </router-link>
                             </li>
                             <li>
@@ -136,9 +130,6 @@ export default {
     color: gray;
 }
 
-.empty-menu-line:hover {
-    box-shadow: none;
-}
 
 li {
     display: block;
@@ -158,7 +149,6 @@ li:hover {
 
 ul li ul {
     visibility: hidden;
-    opacity: 0;
     min-width: 5rem;
     position: absolute;
     transition: all 0.5s ease;
@@ -170,15 +160,19 @@ ul li ul {
 ul li:hover > ul,
 ul li ul:hover {
     visibility: visible;
-    opacity: 1;
     display: block;
     width: 10em;
     object-position: center;
     text-align: center;
 }
 
-ul li ul li:hover {
-    box-shadow: 1px 1px 2px 2px black;
+ul li ul li {
+    min-width: 10em;
+    text-align: left;
+}
+
+ul li ul li:not(.empty-menu-line):hover {
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 .router-view {
