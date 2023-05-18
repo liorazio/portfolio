@@ -44,6 +44,6 @@ EOF
 # create and push deploy commit
 pushd gitdist
 git add .
-#git commit -am "deploy version ${version} $(date '+%d-%b %H:%M')"
-#git push origin HEAD
-#popd
+git commit -am "deploy version ${version} $(date '+%d-%b %H:%M')"
+git push origin HEAD
+popd
