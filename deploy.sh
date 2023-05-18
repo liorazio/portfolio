@@ -17,6 +17,9 @@ version=$(node -p "require('./package.json').version")
 # copy all build files to git working directory
 cp -a ./dist/* ./gitdist/
 
+cat <<'EOF' > ./gitdist/_config.yml
+exclude: [README.md]
+EOF
 cat <<'EOF' > ./gitdist/README.md
 # Portfolio of Lior Raz
 
@@ -38,7 +41,7 @@ All images are copyrighted and are the property of Lior Raz, any use is strictly
 
 All code sources in the portfolio app are opensource under MIT license.
 
-Fork me on GitHub!
+[Fork me on GitHub!](https://github.com/liorazio/portfolio/fork)
 EOF
 
 # create and push deploy commit
