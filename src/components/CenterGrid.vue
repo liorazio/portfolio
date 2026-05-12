@@ -19,8 +19,6 @@ export default {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     grid-gap: 1rem;
-    flex-direction: column;
-    flex-flow: row wrap;
     justify-content: center;
 }
 

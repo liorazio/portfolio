@@ -19,16 +19,16 @@
                             <li class="empty-menu-line"/>
                             <li class="empty-menu-line">Categories</li>
                             <li>
-                                <router-link :to="this.galleryRoutes.gifs">Gifs & Animation
+                                <router-link :to="galleryRoutes.gifs">Gifs & Animation
 
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="this.galleryRoutes.illust">Illustrations
+                                <router-link :to="galleryRoutes.illust">Illustrations
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="this.galleryRoutes.sketch">Sketch book
+                                <router-link :to="galleryRoutes.sketch">Sketch book
 
                                 </router-link>
                             </li>
@@ -36,11 +36,11 @@
                                 Projects
                             </li>
                             <li>
-                                <router-link :to="this.galleryRoutes.dogo">DoGo dash
+                                <router-link :to="galleryRoutes.dogo">DoGo dash
                                 </router-link>
                             </li>
                             <li>
-                                <router-link :to="this.galleryRoutes.golden">Golden aggle
+                                <router-link :to="galleryRoutes.golden">Golden aggle
                                 </router-link>
                             </li>
                         </ul>
@@ -58,15 +58,15 @@
             |
             <router-link to="/about">About</router-link>
             |
-            <router-link :to="this.galleryRoutes.gifs">Gifs & Animation</router-link>
+            <router-link :to="galleryRoutes.gifs">Gifs & Animation</router-link>
             |
-            <router-link :to="this.galleryRoutes.illust">Illustrations & Concept</router-link>
+            <router-link :to="galleryRoutes.illust">Illustrations & Concept</router-link>
             |
-            <router-link :to="this.galleryRoutes.sketch">Sketch book</router-link>
+            <router-link :to="galleryRoutes.sketch">Sketch book</router-link>
             |
-            <router-link :to="this.galleryRoutes.dogo">DoGo dash</router-link>
+            <router-link :to="galleryRoutes.dogo">DoGo dash</router-link>
             |
-            <router-link :to="this.galleryRoutes.golden">Golden aggle</router-link>
+            <router-link :to="galleryRoutes.golden">Golden aggle</router-link>
         </div>
         <Social/>
     </footer>

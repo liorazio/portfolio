@@ -1,9 +1,9 @@
 <template>
     <div>
-        <iframe class="video" :src="this.videoSrc"
+        <iframe class="video" :src="videoSrc"
                 allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         <div v-if="videoDescription" class="vid-desc">
-            <p>{{ this.videoDescription }}</p>
+            <p>{{ videoDescription }}</p>
         </div>
     </div>
 </template>

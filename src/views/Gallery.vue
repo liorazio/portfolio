@@ -2,12 +2,12 @@
     <div>
         <h1>{{ heading }}</h1>
         <EmbeddedVideo v-if="videoSrc" :video-src="videoSrc" :video-description="videoDescription"/>
-        <CenterGrid v-if="items ?? null">
+        <CenterGrid v-if="items">
             <AsyncGalleryItem v-for="item in items" :key="`galleryItem/${itemList}/${item.imgSrc}`"
                               :imgSrc="item.imgSrc" :gridSpan="item.gridSpan" :caption="item.caption"
                               :description="item.description"/>
         </CenterGrid>
-        <h2 v-if="projects ?? null">Related projects</h2>
+        <h2 v-if="projects">Related projects</h2>
         <CenterGrid v-if="projects">
             <AsyncProject v-for="item in projects" :routeTo="item.routeTo" :imgSrc="item.imgSrc"
                           :gridSpan="item.gridSpan"
@@ -21,14 +21,10 @@ import {defineAsyncComponent} from "vue";
 import CenterGrid from "@/components/CenterGrid.vue";
 import EmbeddedVideo from "@/components/EmbeddedVideo.vue";
 
-const AsyncGalleryItem = defineAsyncComponent({
-    name: 'AsyncGalleryItem',
-    loader: () => import('@/components/GalleryItem.vue'),
-})
-const AsyncProject = defineAsyncComponent({
-    name: 'AsyncProject',
-    loader: () => import('@/components/Project.vue'),
-})
+const AsyncGalleryItem = defineAsyncComponent(() => import('@/components/GalleryItem.vue'))
+const AsyncProject = defineAsyncComponent(() => import('@/components/Project.vue'))
+
+const jsonFiles = import.meta.glob('@/assets/json/*.json', { eager: true })
 
 const cleanData = function () {
     return {
@@ -57,14 +53,13 @@ export default {
         }
     },
     methods: {
-        readJsonFromUrl: async function (url) {
-            const response = await fetch(url.href)
-            return await response.json()
+        getJsonData: function (filename) {
+            const key = `/src/assets/json/${filename}`
+            return jsonFiles[key]?.default || jsonFiles[key] || {}
         },
-        loadNewJsonAssets: async function (id) {
+        loadNewJsonAssets: function (id) {
             Object.assign(this, this.mapping[id])
-            Object.assign(this, await this.readJsonFromUrl(new URL(`/src/assets/json/${this.itemList}`, import.meta.url)));
-            console.log(`loaded new json assets for: ${id}`)
+            Object.assign(this, this.getJsonData(this.itemList));
         },
         clean: function () {
             Object.keys(cleanData()).filter(key => key !== "mapping").forEach(key => {
@@ -72,12 +67,11 @@ export default {
             })
         }
     },
-    mounted: async function () {
-        this.mapping = await this.readJsonFromUrl(new URL("/src/assets/json/mapping.json", import.meta.url))
-        console.log(`during Gallery component mount, found ${Object.keys(this.mapping).length} mappings.`)
-        await this.loadNewJsonAssets(this.id)
+    mounted: function () {
+        this.mapping = this.getJsonData('mapping.json')
+        this.loadNewJsonAssets(this.id)
     },
-    beforeRouteUpdate: function (to, from) {
+    beforeRouteUpdate: function (to) {
         this.clean()
         this.loadNewJsonAssets(to.params.id)
     },

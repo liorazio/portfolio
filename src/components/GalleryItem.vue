@@ -1,5 +1,5 @@
 <template>
-    <CenterGridItem :gridSpan="this.gridSpan">
+    <CenterGridItem :gridSpan="gridSpan">
         <figure>
             <img
                     @click="doShowModal()"
@@ -20,6 +20,13 @@
 <script>
 import CenterGridItem from "@/components/CenterGridItem.vue";
 import GalleryItemModal from "@/components/GalleryItemModal.vue";
+
+const assetImages = import.meta.glob('@/assets/**/*.{png,jpg,jpeg,gif,svg}', { eager: true, import: 'default' })
+
+function getAssetUrl(path) {
+    const key = `/src/assets/${path}`
+    return assetImages[key] || path
+}
 
 export default {
     name: "GalleryItem",
@@ -74,7 +81,7 @@ export default {
         return {
             showModal: false,
             gridSpanCalc: this.gridSpan,
-            pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
+            pictureStatic: getAssetUrl(this.imgSrc),
             modalEnabled: false
         }
     }

@@ -38,11 +38,7 @@ import WideHeader from "@/components/WideHeader.vue";
 import CenterGrid from "@/components/CenterGrid.vue";
 import EmbeddedVideo from "@/components/EmbeddedVideo.vue";
 
-// Async component with options
-const AsyncProject = defineAsyncComponent({
-    name: 'AsyncProject',
-    loader: () => import( '@/components/Project.vue'),
-})
+const AsyncProject = defineAsyncComponent(() => import('@/components/Project.vue'))
 
 
 export default {

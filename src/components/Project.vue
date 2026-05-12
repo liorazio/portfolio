@@ -1,7 +1,7 @@
 <template>
-    <CenterGridItem :gridSpan="this.gridSpan">
+    <CenterGridItem :gridSpan="gridSpan">
         <figure>
-            <router-link :to="this.routeTo">
+            <router-link :to="routeTo">
                 <img
                         @mousemove="spanLocation(true,$event);" @mouseleave="spanLocation(false)"
                         :class="`img-grid-x${gridSpanCalc}-span`"
@@ -16,8 +16,15 @@
 </template>
 
 <script>
-import {uuid} from 'vue-uuid';
+import { useId } from 'vue'
 import CenterGridItem from "@/components/CenterGridItem.vue";
+
+const assetImages = import.meta.glob('@/assets/**/*.{png,jpg,jpeg,gif,svg}', { eager: true, import: 'default' })
+
+function getAssetUrl(path) {
+    const key = `/src/assets/${path}`
+    return assetImages[key] || path
+}
 
 export default {
     name: "Project",
@@ -74,16 +81,11 @@ export default {
         window.removeEventListener('resize', this.onResize)
     },
     data: function () {
-
         return {
             hover: false,
             gridSpanCalc: this.gridSpan,
-            pictureStatic: new URL(`/src/assets/${this.imgSrc}`, import.meta.url).href,
-        }
-    },
-    computed: {
-        spanId: function () {
-            return 'span-' + uuid.v4();
+            pictureStatic: getAssetUrl(this.imgSrc),
+            spanId: 'span-' + useId()
         }
     }
 }

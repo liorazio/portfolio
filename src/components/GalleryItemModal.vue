@@ -8,10 +8,10 @@
             <div class="btn-close">
                 <i @click="closeModal()" id="btn-close" class="fa-regular fa-rectangle-xmark"></i>
             </div>
-            <img class="modal-img" :src="this.imgSrc" alt="bigger img">
+            <img class="modal-img" :src="imgSrc" alt="bigger img">
             <div class="text-under-img">
-                <h3 v-if="this.caption">{{ this.caption }}</h3>
-                <p>{{ this.description }}</p>
+                <h3 v-if="caption">{{ caption }}</h3>
+                <p>{{ description }}</p>
             </div>
         </div>
     </transition>

@@ -8,10 +8,7 @@
 
 <script>
 export default {
-    name: "WideHeader",
-    props: {
-        text: String
-    }
+    name: "WideHeader"
 }
 </script>
 
